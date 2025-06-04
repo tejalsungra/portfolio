@@ -2,55 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tejal Sungra | Sustainability Portfolio</title>
+  <title>Tejal's Digital Greenhouse</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    function toggleSection(id) {
-      const section = document.getElementById(id);
-      section.classList.toggle("open");
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <h2>🌱 Tejal Sungra</h2>
-      <nav>
-        <ul>
-          <li><button onclick="toggleSection('about')">About</button></li>
-          <li><button onclick="toggleSection('skills')">Skills</button></li>
-          <li><button onclick="toggleSection('projects')">Projects</button></li>
-          <li><button onclick="toggleSection('experience')">Experience</button></li>
-          <li><a href="Tejal_Sungra_CV.pdf" target="_blank">📄 Download CV</a></li>
-        </ul>
-      </nav>
-    </aside>
-    
-    <main class="content">
-      <section id="about" class="section">
-        <h2>About</h2>
-        <p>I’m a Green Engineer and Data Analyst dedicated to using data to solve sustainability challenges.</p>
-      </section>
+  <header>
+    <h1>🌿 Tejal's Digital Greenhouse</h1>
+    <p>Explore how my skills and projects have grown — each plant tells a story!</p>
+  </header>
 
-      <section id="skills" class="section">
-        <h2>Skills</h2>
-        <ul>
-          <li>Python, SQL, Tableau</li>
-          <li>Carbon Accounting, Circular Economy</li>
-        </ul>
-      </section>
+  <main class="garden">
+    <!-- PLANT CARD 1 -->
+    <div class="plant-card">
+      <h2>🌱 Python for Data Analysis</h2>
+      <p>💧 Effort: 90% | ☀️ Visibility: High | 🌼 Milestone: Bootcamp capstone</p>
+      <div class="progress">
+        <div class="bar" style="width: 90%"></div>
+      </div>
+      <a href="https://github.com/tejalsungra" target="_blank">🌿 View GitHub</a>
+    </div>
 
-      <section id="projects" class="section">
-        <h2>Projects</h2>
-        <p>Explore my projects focused on climate data, automation, and sustainability modeling.</p>
-      </section>
+    <!-- PLANT CARD 2 -->
+    <div class="plant-card">
+      <h2>🌿 Sustainability Dashboard</h2>
+      <p>💧 Effort: 85% | ☀️ Visibility: Medium | 🌼 Milestone: Visualized carbon trends</p>
+      <div class="progress">
+        <div class="bar" style="width: 85%"></div>
+      </div>
+      <a href="#">📊 See Live Project</a>
+    </div>
 
-      <section id="experience" class="section">
-        <h2>Experience</h2>
-        <p>Werkstudent at Infineon • Technical Project Manager at Joynext</p>
-      </section>
-    </main>
-  </div>
+    <!-- PLANT CARD 3 -->
+    <div class="plant-card">
+      <h2>🌻 ESG Strategy Report</h2>
+      <p>💧 Effort: 70% | ☀️ Visibility: Ongoing | 🌼 Milestone: Gap analysis & metrics</p>
+      <div class="progress">
+        <div class="bar" style="width: 70%"></div>
+      </div>
+      <a href="#">📄 Read Report</a>
+    </div>
+  </main>
+
+  <footer>
+    🌱 Built with passion for data & the planet by Tejal © 2025
+  </footer>
 </body>
 </html>

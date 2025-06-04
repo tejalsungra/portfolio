@@ -1,45 +1,64 @@
+/* Reset and base styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background-color: #004d40;
+    background-color: #00695c; /* softer green for a calm, clean SDG vibe */
     color: white;
     text-align: center;
     padding: 2rem;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 0; /* Remove space between cards */
-    padding: 0;
-    margin: 0 auto;
-    max-width: 1200px;
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 0;
 }
 
+/* Card container grid layout */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    width: 100%;
+    justify-items: center;
+}
+
+/* Card links and images */
 .card {
     display: block;
     width: 100%;
+    max-width: 250px;
     text-align: center;
     margin: 0;
     padding: 0;
-    box-shadow: none;
-    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
 
 .card img {
     width: 100%;
     height: auto;
     display: block;
-    margin: 0;
-    padding: 0;
     object-fit: cover;
-    aspect-ratio: 1 / 1; /* keeps square shape even if image is not square */
+    aspect-ratio: 1 / 1;
 }
 
+/* Footer placement */
 footer {
     background-color: #e0f2f1;
     text-align: center;

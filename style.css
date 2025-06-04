@@ -57,16 +57,23 @@ footer {
   padding: 1rem;
 }
 /* ✅ Responsive Media Query */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .card-row {
+    justify-content: center;
+    gap: 0; /* No space between cards */
+  }
+
   .card {
-    width: 45vw;
-    height: 45vw;
+    width: 33.33vw;  /* 3 in a row */
+    height: 33.33vw;
   }
 }
+.card-grid {
+  padding: 0;
+}
 
-@media (max-width: 480px) {
-  .card {
-    width: 90vw;
-    height: 90vw;
-  }
+.card img {
+  display: block;
+  margin: 0;
+  padding: 0;
 }

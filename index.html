@@ -1,50 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tejal Sungra | Green Engineer Portfolio</title>
+  <title>Tejal Sungra | Sustainability Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle("open");
+    }
+  </script>
 </head>
 <body>
-  <header class="hero">
-    <h1>Tejal Sungra</h1>
-    <p>🌿 Green Engineer | 📊 Data Analyst | ♻️ Sustainability Strategist</p>
-  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>🌱 Tejal Sungra</h2>
+      <nav>
+        <ul>
+          <li><button onclick="toggleSection('about')">About</button></li>
+          <li><button onclick="toggleSection('skills')">Skills</button></li>
+          <li><button onclick="toggleSection('projects')">Projects</button></li>
+          <li><button onclick="toggleSection('experience')">Experience</button></li>
+          <li><a href="Tejal_Sungra_CV.pdf" target="_blank">📄 Download CV</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="content">
+      <section id="about" class="section">
+        <h2>About</h2>
+        <p>I’m a Green Engineer and Data Analyst dedicated to using data to solve sustainability challenges.</p>
+      </section>
 
-  <section class="intro">
-    <h2>Welcome</h2>
-    <p>Welcome to my digital greenhouse — a professional portfolio blending environmental impact and data-driven insight. Explore my work in green engineering, sustainable data projects, and analytics.</p>
-  </section>
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+          <li>Python, SQL, Tableau</li>
+          <li>Carbon Accounting, Circular Economy</li>
+        </ul>
+      </section>
 
-  <section class="skills-dashboard">
-    <h2>Key Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">Python</div>
-      <div class="skill-card">SQL</div>
-      <div class="skill-card">Tableau</div>
-      <div class="skill-card">LCA / OpenLCA</div>
-      <div class="skill-card">Circular Economy</div>
-      <div class="skill-card">Project Management</div>
-    </div>
-  </section>
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <p>Explore my projects focused on climate data, automation, and sustainability modeling.</p>
+      </section>
 
-  <section class="projects">
-    <h2>Featured Projects</h2>
-    <div class="project-card">
-      <h3>Scope 3 Estimation Model</h3>
-      <p>A custom AI-powered dashboard estimating carbon emissions using procurement data.</p>
-    </div>
-    <div class="project-card">
-      <h3>Smart Recommender System</h3>
-      <p>Built collaborative filtering recommender using movie dataset for optimized streaming UX.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>📍 Dresden, Germany | <a href="Tejal_Sungra_CV.pdf" target="_blank">Download CV</a></p>
-    <p>&copy; 2025 Tejal Sungra</p>
-  </footer>
+      <section id="experience" class="section">
+        <h2>Experience</h2>
+        <p>Werkstudent at Infineon • Technical Project Manager at Joynext</p>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

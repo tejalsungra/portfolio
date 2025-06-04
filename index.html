@@ -2,50 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Tejal's Digital Greenhouse</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tejal Sungra | Eco-Dashboard Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <header>
-    <h1>🌿 Tejal's Digital Greenhouse</h1>
-    <p>Explore how my skills and projects have grown — each plant tells a story!</p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Tejal Sungra</h1>
+      <p>Green Engineer | Data Analyst | Sustainability Strategist</p>
+      <a class="btn" href="Tejal_Sungra_CV.pdf" target="_blank">Download CV</a>
+    </div>
   </header>
 
-  <main class="garden">
-    <!-- PLANT CARD 1 -->
-    <div class="plant-card">
-      <h2>🌱 Python for Data Analysis</h2>
-      <p>💧 Effort: 90% | ☀️ Visibility: High | 🌼 Milestone: Bootcamp capstone</p>
-      <div class="progress">
-        <div class="bar" style="width: 90%"></div>
-      </div>
-      <a href="https://github.com/tejalsungra" target="_blank">🌿 View GitHub</a>
-    </div>
+  <section class="kpis">
+    <div class="kpi-card"><h2>12</h2><p>Projects</p></div>
+    <div class="kpi-card"><h2>9</h2><p>Tools Mastered</p></div>
+    <div class="kpi-card"><h2>5</h2><p>Carbon Initiatives</p></div>
+    <div class="kpi-card"><h2>3 yrs</h2><p>Experience</p></div>
+  </section>
 
-    <!-- PLANT CARD 2 -->
-    <div class="plant-card">
-      <h2>🌿 Sustainability Dashboard</h2>
-      <p>💧 Effort: 85% | ☀️ Visibility: Medium | 🌼 Milestone: Visualized carbon trends</p>
-      <div class="progress">
-        <div class="bar" style="width: 85%"></div>
-      </div>
-      <a href="#">📊 See Live Project</a>
-    </div>
+  <section class="charts">
+    <h2>Skill Distribution</h2>
+    <canvas id="skillChart" width="400" height="200"></canvas>
+  </section>
 
-    <!-- PLANT CARD 3 -->
-    <div class="plant-card">
-      <h2>🌻 ESG Strategy Report</h2>
-      <p>💧 Effort: 70% | ☀️ Visibility: Ongoing | 🌼 Milestone: Gap analysis & metrics</p>
-      <div class="progress">
-        <div class="bar" style="width: 70%"></div>
+  <section class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Carbon Tracker App</h3>
+        <p>Built using Streamlit, Pandas & Matplotlib to visualize personal carbon data.</p>
+        <a href="#">View GitHub</a>
       </div>
-      <a href="#">📄 Read Report</a>
+      <div class="project">
+        <h3>Green Supply Chain Analysis</h3>
+        <p>End-to-end SQL + Tableau dashboard with insights for decision-makers.</p>
+        <a href="#">See Dashboard</a>
+      </div>
     </div>
-  </main>
+  </section>
 
   <footer>
-    🌱 Built with passion for data & the planet by Tejal © 2025
+    <p>&copy; 2025 Tejal Sungra. Built with ❤ for sustainability.</p>
   </footer>
+
+  <script>
+    const ctx = document.getElementById('skillChart');
+    new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['Python', 'SQL', 'Tableau', 'Sustainability', 'Project Mgmt', 'LCA'],
+        datasets: [{
+          label: 'Skill Mastery',
+          data: [90, 80, 75, 85, 70, 65],
+          backgroundColor: 'rgba(76, 175, 80, 0.2)',
+          borderColor: '#4caf50'
+        }]
+      },
+      options: {
+        scales: {
+          r: {
+            beginAtZero: true,
+            pointLabels: { font: { size: 14 } }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>

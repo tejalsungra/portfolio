@@ -1,71 +1,37 @@
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f4f4f4;
-  color: #333;
-}
-
-.hero {
-  background: url('https://source.unsplash.com/1600x400/?earth,sustainability') no-repeat center/cover;
-  padding: 5rem 2rem;
-  text-align: center;
-  color: white;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  margin: 1rem 0;
-}
-
-.btn {
-  padding: 0.8rem 1.5rem;
-  background-color: #00695c;
-  color: #fff;
-  border: none;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background-color: #004d40;
-}
-
-.sdg-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+.about, .skills, .kpi-stats, .contact-call {
+  background: #fff;
   padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
+  margin: 2rem auto;
+  max-width: 1000px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06);
 }
 
-.sdg-tile {
-  padding: 2rem;
-  color: white;
-  border-radius: 6px;
+.skills .skill-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   font-size: 1.2rem;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 1rem;
+  color: #2e7d32;
 }
 
-/* SDG-like colors */
-.sdg1 { background-color: #e5243b; }
-.sdg2 { background-color: #dda63a; }
-.sdg3 { background-color: #4c9f38; }
-.sdg4 { background-color: #c5192d; }
-.sdg5 { background-color: #26bde2; }
-.sdg6 { background-color: #ff3a21; }
+.kpi-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00695c;
+  margin-top: 1rem;
+}
 
-footer {
-  text-align: center;
+.kpi {
   padding: 1rem;
-  background-color: #e0f2f1;
-  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+.contact-call p {
+  margin: 1rem 0;
 }

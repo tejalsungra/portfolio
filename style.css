@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset and base styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,15 +6,15 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-color: #f7f7f7;
 }
 
 header {
-    background-color: #2f4f4f; /* More professional, neutral tone */
+    background-color: #2f4f4f;
     color: white;
     text-align: center;
     padding: 2rem 1rem;
@@ -22,21 +22,35 @@ header {
 
 main {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-    padding: 3rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1100px;
+    padding: 2rem 1rem;
+}
+
+/* Row wrapper for top 4 cards */
+.row-top {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Row wrapper for bottom 2 cards */
+.row-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .card {
     width: 250px;
     height: 250px;
+    margin: 0;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     overflow: hidden;
@@ -44,7 +58,7 @@ main {
 }
 
 .card:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .card img {

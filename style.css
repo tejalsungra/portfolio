@@ -1,82 +1,104 @@
+/* style.css - Eco Dashboard Theme */
+
 body {
-  font-family: 'Nunito', sans-serif;
-  background: #e8f5e9;
-  color: #1b4332;
   margin: 0;
-  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5fdf7;
+  color: #1c3d2e;
+  line-height: 1.6;
 }
 
 header {
+  background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+  padding: 3rem 1.5rem;
   text-align: center;
-  background: #c8e6c9;
-  padding: 2rem 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  color: #2e7d32;
 }
 
 header p {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.garden {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.plant-card {
-  background: #ffffff;
-  border: 2px solid #a5d6a7;
-  border-radius: 10px;
-  padding: 1.5rem;
-  width: 300px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-}
-
-.plant-card:hover {
-  transform: scale(1.03);
-}
-
-.plant-card h2 {
-  margin-top: 0;
+  font-size: 1.3rem;
   color: #388e3c;
 }
 
-.plant-card p {
-  font-size: 0.95rem;
-  margin: 0.5rem 0 1rem;
+section.kpis {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  background: #e8f5e9;
+  border-top: 2px solid #c8e6c9;
 }
 
-.plant-card .progress {
-  background: #e0f2f1;
-  border-radius: 5px;
-  height: 10px;
-  margin-bottom: 1rem;
-  overflow: hidden;
+.kpi-card {
+  background: white;
+  border-left: 5px solid #66bb6a;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.plant-card .bar {
-  background-color: #66bb6a;
-  height: 100%;
-  transition: width 0.4s ease;
-}
-
-.plant-card a {
-  text-decoration: none;
-  font-weight: bold;
+.kpi-card h2 {
+  margin: 0;
+  font-size: 2rem;
   color: #1b5e20;
+}
+
+.kpi-card p {
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+  color: #388e3c;
+}
+
+.chart-container {
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 8px;
+  border-left: 4px solid #81c784;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin: 0;
+  color: #2e7d32;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 0.95rem;
 }
 
 footer {
   text-align: center;
-  background: #a5d6a7;
-  padding: 1rem;
+  padding: 1.5rem;
+  background: #d0f0dc;
   font-size: 0.9rem;
+  color: #2e7d32;
 }

@@ -56,3 +56,17 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+/* ✅ Responsive Media Query */
+@media (max-width: 768px) {
+  .card {
+    width: 45vw;
+    height: 45vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90vw;
+    height: 90vw;
+  }
+}

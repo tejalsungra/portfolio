@@ -2,51 +2,96 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #2e2e2e;
+  background: #f7fdfc;
+  color: #222;
 }
 
 header {
-  background-color: #e8f5e9;
-  padding: 2rem;
+  background: linear-gradient(120deg, #a5d6a7, #dcedc8);
   text-align: center;
+  padding: 3rem 1rem;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5rem;
-  color: #2e7d32;
+  color: #1b5e20;
 }
 
 header p {
   font-size: 1.2rem;
   margin-top: 0.5rem;
+  color: #33691e;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #a5d6a7;
-  padding: 0.5rem;
-}
-
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #1b5e20;
-  font-weight: 600;
-}
-
-section {
-  padding: 2rem;
-  max-width: 960px;
+.intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
+  max-width: 800px;
   margin: auto;
+}
+
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.tile {
+  background-color: #eee;
+  border-radius: 12px;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tile a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Custom SDG colors */
+.sdg1 { background-color: #56c596; }
+.sdg2 { background-color: #42a5f5; }
+.sdg3 { background-color: #ef5350; }
+.sdg4 { background-color: #ab47bc; }
+.sdg5 { background-color: #ffa726; }
+.sdg6 { background-color: #26a69a; }
+
+.cta {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.download-btn {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #1b5e20;
 }
 
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
   background-color: #e0f2f1;
-  color: #004d40;
   font-size: 0.9rem;
+  color: #004d40;
 }

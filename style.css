@@ -12,7 +12,7 @@ header {
   background-color: #004d40;
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 0;
 }
 
 main {
@@ -26,7 +26,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 0;
 }
 
 .card-row {

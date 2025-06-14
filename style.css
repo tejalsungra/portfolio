@@ -1,3 +1,50 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+  background-color: #005b4f; /* Teal-inspired green */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* Card Grid */
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Row Setup */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Card Base */
 .card {
   position: relative;
   overflow: hidden;
@@ -5,6 +52,7 @@
   height: 300px;
   border-radius: 0;
   margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -15,6 +63,7 @@
   border-radius: 0;
 }
 
+/* Hover Overlay */
 .card-overlay {
   position: absolute;
   top: 0;
@@ -39,11 +88,12 @@
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .card-overlay button {
   background-color: white;
-  color: #004d40;
+  color: #005b4f;
   border: none;
   padding: 0.5rem 1rem;
   font-weight: bold;
@@ -54,4 +104,39 @@
 
 .card-overlay button:hover {
   background-color: #e0f2f1;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #005b4f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive Layouts */
+@media (max-width: 1024px) {
+  .card {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 30vw;
+    height: 30vw;
+    margin: 0.3rem;
+  }
+  .card-row {
+    justify-content: center;
+  }
 }

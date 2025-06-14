@@ -1,4 +1,4 @@
-/* Base Page Layout */
+/* Base setup */
 body {
   margin: 0;
   padding: 0;
@@ -33,51 +33,47 @@ main {
 .card-row {
   display: flex;
   justify-content: center;
-  gap: 0;
   flex-wrap: wrap;
+  gap: 0;
 }
 
-/* Card Link Container */
+/* CARD SETUP */
 .card {
+  position: relative;
   width: 300px;
   height: 300px;
   margin: 0;
   padding: 0;
-  position: relative;
   display: block;
+  overflow: hidden;
 }
 
-/* Image inside card */
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 0;
-  margin: 0;
-  padding: 0;
 }
 
-/* Overlay */
+/* OVERLAY EFFECT */
 .card .card-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.55);
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  color: white;
+  font-size: 1rem;
   text-align: center;
   padding: 1rem;
-  opacity: 0;
   transition: opacity 0.3s ease;
-  font-size: 1rem;
 }
 
-/* Show overlay on hover */
 .card:hover .card-overlay {
   opacity: 1;
 }
@@ -90,10 +86,15 @@ footer {
   padding: 1rem;
 }
 
-/* ✅ Responsive Cards on Mobile */
+/* RESPONSIVE */
 @media (max-width: 480px) {
   .card {
     width: 33.33vw;
     height: 33.33vw;
+  }
+
+  .card .card-overlay {
+    font-size: 0.6rem;
+    padding: 0.5rem;
   }
 }

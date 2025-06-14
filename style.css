@@ -1,14 +1,48 @@
+/* Base Page Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #004d40; /* Same as footer */
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  gap: 0; /* No space between cards */
+}
+
+/* Card Styling */
 .card {
   width: 300px;
   height: 300px;
   display: block;
   margin: 0;
-}
-
-.card-wrapper {
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 .card img {
@@ -16,9 +50,19 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
 
-/* Overlay only shows on hover */
+/* Overlay Wrapper */
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Overlay on Hover */
 .card-overlay {
   position: absolute;
   top: 0;
@@ -39,4 +83,25 @@
 
 .card:hover .card-overlay {
   opacity: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ✅ Responsive Layout */
+@media (max-width: 480px) {
+  .card-row {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .card {
+    width: 33.33vw;  /* 3 per row on mobile */
+    height: 33.33vw;
+  }
 }

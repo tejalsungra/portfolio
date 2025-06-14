@@ -1,4 +1,3 @@
-/* General Reset */
 body {
   margin: 0;
   padding: 0;
@@ -9,50 +8,45 @@ body {
   min-height: 100vh;
 }
 
-/* Header Styling */
 header {
-  background-color: #005b4f; /* Teal-inspired green */
+  background-color: #004d40;
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 
-/* Main Section */
 main {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
 }
 
-/* Card Grid */
 .card-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  width: 100%;
-  max-width: 1100px;
+  gap: 0;
+  padding: 0;
 }
 
-/* Row Setup */
 .card-row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 0;
 }
 
-/* Card Base */
 .card {
-  position: relative;
-  overflow: hidden;
   width: 300px;
   height: 300px;
-  border-radius: 0;
+  display: block;
   margin: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .card img {
@@ -85,21 +79,19 @@ main {
 }
 
 .card-overlay p {
-  font-size: 1.1rem;
-  margin-bottom: 0.8rem;
+  margin: 0.5rem;
+  font-size: 1rem;
   text-align: center;
-  padding: 0 1rem;
 }
 
 .card-overlay button {
   background-color: white;
-  color: #005b4f;
+  color: #004d40;
   border: none;
   padding: 0.5rem 1rem;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .card-overlay button:hover {
@@ -108,35 +100,22 @@ main {
 
 /* Footer Styling */
 footer {
-  background-color: #005b4f;
+  background-color: #004d40;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: auto;
 }
 
-/* Responsive Layouts */
-@media (max-width: 1024px) {
-  .card {
-    width: 250px;
-    height: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: 30vw;
-    height: 30vw;
-  }
-}
-
+/* Responsive Layout */
 @media (max-width: 480px) {
-  .card {
-    width: 30vw;
-    height: 30vw;
-    margin: 0.3rem;
-  }
   .card-row {
     justify-content: center;
+    gap: 0;
+  }
+
+  .card {
+    width: 33.33vw;
+    height: 33.33vw;
   }
 }

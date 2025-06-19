@@ -4,104 +4,122 @@
   <meta charset="UTF-8" />
   <title>My Toolset | Tejal Sungra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #fff8e1;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #fcfcfc;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      color: #333;
     }
 
     header {
-      background-color: #e0a800;
+      background-color: #d09800; /* mustard */
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin: 0 0 0.5rem;
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
     }
 
     main {
       flex: 1;
-      padding: 2rem;
-      max-width: 1200px;
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
       margin: auto;
     }
 
-    section {
-      margin-bottom: 2.5rem;
+    h2 {
+      color: #d09800;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
     }
 
-    h2 {
-      font-size: 1.8rem;
+    .intro-text {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      color: #555;
+    }
+
+    .tool-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .tool-column {
+      flex: 1 1 30%;
+    }
+
+    .tool-column h3 {
       color: #c62828;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #c62828;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid #ddd;
       padding-bottom: 0.3rem;
     }
 
-    ul {
+    .tool-column ul {
       list-style: none;
       padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.2rem;
+      margin: 0;
     }
 
-    li {
-      font-size: 1.05rem;
-      background: #fff3cd;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    .tool-column li {
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
     }
 
-     .nav-buttons {
+    .nav-buttons {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      margin: 2rem auto;
+      margin-top: auto;
     }
 
-    .nav-buttons a {
-      background-color: #e0a800;
+    .nav-btn {
+      padding: 0.6rem 1.2rem;
+      background-color: #c62828;
       color: white;
       text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
+      border-radius: 5px;
       font-weight: bold;
-      transition: all 0.3s ease;
     }
 
-    .nav-buttons a:hover {
-      background-color: #e0a800;
+    .nav-btn:hover {
+      background-color: #a71f1f;
     }
 
     footer {
-      background-color: #e0a800;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: auto;
-
-    footer {
-      background-color: #e0a800;
+      background-color: #c62828;
       color: white;
       text-align: center;
       padding: 1rem;
     }
 
     @media (max-width: 768px) {
-      .button-group {
+      .tool-columns {
         flex-direction: column;
         align-items: center;
+      }
+
+      .tool-column {
+        width: 100%;
+        text-align: left;
       }
     }
   </style>
@@ -113,40 +131,47 @@
   </header>
 
   <main>
-    <section>
-      <h2>Data Science & Analytics</h2>
-      <ul>
-        <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, NLP)</li>
-        <li>Jupyter Notebook & Google Colab</li>
-        <li>SQL (MySQL, Oracle)</li>
-        <li>Tableau & Power BI</li>
-        <li>Streamlit</li>
-      </ul>
-    </section>
+    <h2>Sustainable Impact Toolset</h2>
+    <p class="intro-text">
+      I use a curated set of tools that bridge sustainability strategy and technology. These help me turn complex challenges into measurable, data-driven solutions.
+    </p>
 
-    <section>
-      <h2>Engineering, ERP & Productivity</h2>
-      <ul>
-        <li>OpenLCA</li>
-        <li>AutoCAD basics</li>
-        <li>SAP ERP (Coursework)</li>
-        <li>Microsoft Excel, PowerPoint, Word</li>
-        <li>KNIME</li>
-      </ul>
-    </section>
+    <div class="tool-columns">
+      <div class="tool-column">
+        <h3>Data Science & Analytics</h3>
+        <ul>
+          <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, NLP)</li>
+          <li>Jupyter Notebook & Google Colab</li>
+          <li>SQL (MySQL, Oracle)</li>
+          <li>Tableau & Power BI</li>
+          <li>Streamlit</li>
+        </ul>
+      </div>
 
-    <section>
-      <h2>Project & Work Tools by Experience</h2>
-      <ul>
-        <li>Infineon: MS Project, Jira, Confluence</li>
-        <li>Joynext: Technical reporting, task tracking tools</li>
-        <li>FH Zwickau & HTW Dresden: Python, SAP, OpenLCA, Excel</li>
-      </ul>
-    </section>
+      <div class="tool-column">
+        <h3>Engineering, ERP & Productivity</h3>
+        <ul>
+          <li>OpenLCA</li>
+          <li>AutoCAD basics</li>
+          <li>SAP ERP (Coursework)</li>
+          <li>Microsoft Excel, PowerPoint, Word</li>
+          <li>KNIME</li>
+        </ul>
+      </div>
+
+      <div class="tool-column">
+        <h3>Project & Work Tools by Experience</h3>
+        <ul>
+          <li>Infineon: MS Project, Jira, Confluence</li>
+          <li>Joynext: Technical reporting, task tracking tools</li>
+          <li>FH Zwickau & HTW Dresden: Python, SAP, OpenLCA, Excel</li>
+        </ul>
+      </div>
+    </div>
 
     <div class="nav-buttons">
-      <a href="index.html">⬅ Back to Home</a>
-      <a href="impact.html">Next: My Impact ➡</a>
+      <a href="index.html" class="nav-btn">← Back to Home</a>
+      <a href="experience.html" class="nav-btn">Next: My Journey →</a>
     </div>
   </main>
 

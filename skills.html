@@ -7,16 +7,16 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #fcfcfc;
-      color: #333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      color: #333;
     }
 
     header {
-      background-color: #d09800;
+      background-color: #d09800; /* mustard */
       color: white;
       text-align: center;
       padding: 2rem 1rem;
@@ -27,48 +27,36 @@
       font-size: 2.2rem;
     }
 
-    .toolset-container {
-      background: #f4f7f5;
-      padding: 3rem 1.5rem;
-      display: flex;
-      justify-content: center;
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
     }
 
-    .toolset-content {
+    main {
+      flex: 1;
+      padding: 2rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .tool-columns {
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-start;
-      max-width: 1100px;
-      gap: 2rem;
+      justify-content: space-between;
+      gap: 3rem;
+      margin-bottom: 3rem;
     }
 
     .tool-column {
-      flex: 1 1 300px;
-      animation: fadeIn 1.2s ease forwards;
-      opacity: 0;
-    }
-
-    .tool-column:nth-child(1) { animation-delay: 0.2s; }
-    .tool-column:nth-child(2) { animation-delay: 0.4s; }
-    .tool-column:nth-child(3) { animation-delay: 0.6s; }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      flex: 1 1 30%;
     }
 
     .tool-column h3 {
-      font-size: 1.9rem;
       color: #d09800;
-      border-bottom: 2px dashed #d09800;
-      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
       padding-bottom: 0.3rem;
+      border-bottom: 3px dotted #d09800;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -81,37 +69,40 @@
 
     .tool-column li {
       margin-bottom: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 1.5rem;
     }
 
     .tool-column li::before {
-      content: "🛠️";
-      font-size: 1.1rem;
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #d09800;
+      font-weight: bold;
     }
 
     .nav-buttons {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      margin: 1.5rem auto 0 auto;
+      margin: 0.5rem auto;
     }
 
-    .nav-buttons a {
+    .nav-btn {
+      padding: 0.75rem 1.5rem;
       background-color: #d09800;
       color: white;
       text-decoration: none;
-      padding: 0.65rem 1.4rem;
       border-radius: 6px;
       font-weight: bold;
+      font-size: 1rem;
       transition: all 0.3s ease;
     }
 
-    .nav-buttons a:hover {
-      background-color: #b37e00;
+    .nav-btn:hover {
+      background-color: #a77700;
     }
 
     footer {
@@ -119,17 +110,17 @@
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: auto;
     }
 
     @media (max-width: 768px) {
-      .toolset-content {
+      .tool-columns {
         flex-direction: column;
-        text-align: left;
+        align-items: center;
       }
 
       .tool-column {
         width: 100%;
+        text-align: left;
       }
 
       .nav-buttons {
@@ -143,10 +134,11 @@
 <body>
   <header>
     <h1>My Tech Stack</h1>
+    <p>The software and platforms I’ve mastered across industries and roles.</p>
   </header>
 
-  <main class="toolset-container">
-    <div class="toolset-content">
+  <main>
+    <div class="tool-columns">
       <div class="tool-column">
         <h3>Data Science & Analytics</h3>
         <ul>
@@ -170,7 +162,7 @@
       </div>
 
       <div class="tool-column">
-        <h3>Project & Work Tools</h3>
+        <h3>Project & Work Tools by Experience</h3>
         <ul>
           <li>Infineon: MS Project, Jira, Confluence</li>
           <li>Joynext: Technical reporting, task tracking tools</li>
@@ -178,12 +170,12 @@
         </ul>
       </div>
     </div>
-  </main>
 
-  <div class="nav-buttons">
-    <a href="index.html">&larr; Back to Home</a>
-    <a href="experience.html">Next: My Journey &rarr;</a>
-  </div>
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-btn">← Back to Home</a>
+      <a href="experience.html" class="nav-btn">Next: My Journey →</a>
+    </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>

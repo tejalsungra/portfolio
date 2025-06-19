@@ -44,6 +44,23 @@
 
     .tool-column {
       flex: 1 1 300px;
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .tool-column:nth-child(1) { animation-delay: 0.2s; }
+    .tool-column:nth-child(2) { animation-delay: 0.4s; }
+    .tool-column:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .tool-column h3 {
@@ -66,25 +83,28 @@
       margin-bottom: 1rem;
       font-size: 1.1rem;
       line-height: 1.7;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .tool-column li::before {
-      content: "🛠️ ";
-      margin-right: 6px;
+      content: "🛠️";
+      font-size: 1.1rem;
     }
 
     .nav-buttons {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      margin: 2rem auto;
+      margin: 1.5rem auto 0 auto;
     }
 
     .nav-buttons a {
       background-color: #d09800;
       color: white;
       text-decoration: none;
-      padding: 0.75rem 1.5rem;
+      padding: 0.65rem 1.4rem;
       border-radius: 6px;
       font-weight: bold;
       transition: all 0.3s ease;

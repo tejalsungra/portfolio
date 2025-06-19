@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Professional Toolset | Tejal Sungra</title>
+  <title>My Toolset | Tejal Sungra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fcfcfc;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff8e1;
       color: #333;
       display: flex;
       flex-direction: column;
@@ -17,21 +17,21 @@
     }
 
     header {
-      background-color: #d4a300; /* mustard yellow */
+      background-color: #e0a800;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem;
     }
 
     main {
       flex: 1;
-      padding: 2rem 1.5rem;
-      max-width: 1100px;
+      padding: 2rem 1rem;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -40,133 +40,105 @@
     }
 
     h2 {
-      color: #d4a300;
+      font-size: 1.8rem;
+      color: #c62828;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #d4a300;
-      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #c62828;
+      padding-bottom: 0.3rem;
     }
 
-    .tools-grid {
+    ul {
+      list-style: none;
+      padding: 0;
+      columns: 2;
+      column-gap: 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .button-group {
       display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
       flex-wrap: wrap;
-      gap: 0.7rem;
-    }
-
-    .tool {
-      background: #fff8e1;
-      border: 1px solid #d4a300;
-      padding: 0.6rem 1rem;
-      border-radius: 5px;
-      font-size: 0.95rem;
-    }
-
-    .cta {
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    .cta-button {
-      background-color: #d4a300;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
       gap: 1rem;
-      margin-top: 2rem;
     }
 
-    .nav-buttons a {
-      background-color: #333;
-      color: white;
-      padding: 0.5rem 1.2rem;
-      border-radius: 5px;
+    .button-group a {
       text-decoration: none;
-      font-size: 0.9rem;
+      background-color: #c62828;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .button-group a:hover {
+      background-color: #a31515;
     }
 
     footer {
-      background-color: #d4a300;
+      background-color: #e0a800;
       color: white;
       text-align: center;
       padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      ul {
+        columns: 1;
+      }
+      .button-group {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>My Professional Toolset</h1>
+    <p>Explore the tools I use across domains and projects.</p>
   </header>
 
   <main>
     <section>
-      <h2>Data Science & Analysis Tools</h2>
-      <div class="tools-grid">
-        <div class="tool">Python</div>
-        <div class="tool">Pandas</div>
-        <div class="tool">NumPy</div>
-        <div class="tool">Matplotlib</div>
-        <div class="tool">Seaborn</div>
-        <div class="tool">Scikit-learn</div>
-        <div class="tool">Streamlit</div>
-        <div class="tool">Power BI</div>
-        <div class="tool">Tableau</div>
-        <div class="tool">Excel</div>
-      </div>
+      <h2>Data Science & Analytics Tools</h2>
+      <ul>
+        <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)</li>
+        <li>Jupyter Notebook & Google Colab</li>
+        <li>SQL (MySQL, PostgreSQL)</li>
+        <li>Tableau & Power BI</li>
+        <li>Streamlit</li>
+      </ul>
     </section>
 
     <section>
-      <h2>Engineering, Automation & Analytics</h2>
-      <div class="tools-grid">
-        <div class="tool">OpenLCA</div>
-        <div class="tool">KNIME</div>
-        <div class="tool">SQL</div>
-        <div class="tool">AWS</div>
-        <div class="tool">MySQL</div>
-        <div class="tool">Oracle</div>
-        <div class="tool">Selenium</div>
-        <div class="tool">BeautifulSoup</div>
-      </div>
+      <h2>Engineering, ERP & Office Tools</h2>
+      <ul>
+        <li>OpenLCA</li>
+        <li>AutoCAD basics</li>
+        <li>SAP ERP (Coursework)</li>
+        <li>Microsoft Excel (Advanced), PowerPoint, Word</li>
+        <li>KNIME</li>
+      </ul>
     </section>
 
     <section>
-      <h2>ERP, Office & Project Tools</h2>
-      <div class="tools-grid">
-        <div class="tool">SAP</div>
-        <div class="tool">Oracle BI</div>
-        <div class="tool">MS Project</div>
-        <div class="tool">MS Office</div>
-        <div class="tool">Google Workspace</div>
-        <div class="tool">JIRA</div>
-        <div class="tool">Confluence</div>
-        <div class="tool">Agile & Scrum</div>
-      </div>
+      <h2>Experience-based Tools</h2>
+      <ul>
+        <li>Infineon: MS Project, Jira, Confluence</li>
+        <li>Joynext: Technical reporting, task tracking tools</li>
+        <li>FH Zwickau & HTW Dresden: Python, SAP, OpenLCA, Excel</li>
+      </ul>
     </section>
 
-    <section>
-      <h2>Applied at Companies & Institutions</h2>
-      <div class="tools-grid">
-        <div class="tool">Infineon (KNIME, Oracle, BI Portal)</div>
-        <div class="tool">Joynext (JIRA, Planning Tools)</div>
-        <div class="tool">HTW Dresden, FH Zwickau (OpenLCA, SAP)</div>
-        <div class="tool">WBS Bootcamp (Data Science Full Stack)</div>
-      </div>
-    </section>
-
-    <div class="cta">
-      <p>Want to know how I applied these tools in action?</p>
-      <a href="impact.html" class="cta-button">Explore My Impact</a>
-    </div>
-
-    <div class="nav-buttons">
-      <a href="index.html">← Back to Home</a>
-      <a href="experience.html">Next: My Journey →</a>
+    <div class="button-group">
+      <a href="index.html">⬅ Back to Home</a>
+      <a href="impact.html">Next: My Impact ➡</a>
     </div>
   </main>
 

@@ -30,7 +30,7 @@
 
     main {
       flex: 1;
-      padding: 2rem 1rem;
+      padding: 2rem;
       max-width: 1200px;
       margin: auto;
     }
@@ -50,21 +50,25 @@
     ul {
       list-style: none;
       padding: 0;
-      columns: 2;
-      column-gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
     }
 
     li {
-      margin-bottom: 0.5rem;
       font-size: 1.05rem;
+      background: #fff3cd;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .button-group {
       display: flex;
-      justify-content: space-between;
-      margin-top: 2rem;
-      flex-wrap: wrap;
+      justify-content: center;
       gap: 1rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
     }
 
     .button-group a {
@@ -88,9 +92,6 @@
     }
 
     @media (max-width: 768px) {
-      ul {
-        columns: 1;
-      }
       .button-group {
         flex-direction: column;
         align-items: center;
@@ -100,13 +101,13 @@
 </head>
 <body>
   <header>
-    <h1>My Professional Toolset</h1>
-    <p>Explore the tools I use across domains and projects.</p>
+    <h1>My Professional Toolkit</h1>
+    <p>The software and platforms I’ve mastered across industries and roles.</p>
   </header>
 
   <main>
     <section>
-      <h2>Data Science & Analytics Tools</h2>
+      <h2>Data Science & Analytics</h2>
       <ul>
         <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)</li>
         <li>Jupyter Notebook & Google Colab</li>
@@ -117,7 +118,7 @@
     </section>
 
     <section>
-      <h2>Engineering, ERP & Office Tools</h2>
+      <h2>Engineering, ERP & Productivity</h2>
       <ul>
         <li>OpenLCA</li>
         <li>AutoCAD basics</li>
@@ -128,7 +129,7 @@
     </section>
 
     <section>
-      <h2>Experience-based Tools</h2>
+      <h2>Project & Work Tools by Experience</h2>
       <ul>
         <li>Infineon: MS Project, Jira, Confluence</li>
         <li>Joynext: Technical reporting, task tracking tools</li>

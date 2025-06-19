@@ -7,12 +7,12 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #fcfcfc;
+      color: #333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      color: #333;
     }
 
     header {
@@ -27,36 +27,31 @@
       font-size: 2.2rem;
     }
 
-    header p {
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
-    }
-
-    main {
-      flex: 1;
+    .toolset-container {
+      background: #f4f7f5;
       padding: 3rem 1.5rem;
-      max-width: 1100px;
-      margin: auto;
+      display: flex;
+      justify-content: center;
     }
 
-    .tool-columns {
+    .toolset-content {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 3rem;
-      margin-bottom: 3rem;
+      align-items: flex-start;
+      max-width: 1100px;
+      gap: 2rem;
     }
 
     .tool-column {
-      flex: 1 1 30%;
+      flex: 1 1 300px;
     }
 
     .tool-column h3 {
-      color: #d09800;
       font-size: 1.9rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.4rem;
+      color: #d09800;
       border-bottom: 2px dashed #d09800;
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -82,21 +77,20 @@
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      margin: 2.5rem auto 1rem;
+      margin: 2rem auto;
     }
 
-    .nav-btn {
-      padding: 0.75rem 1.5rem;
+    .nav-buttons a {
       background-color: #d09800;
       color: white;
       text-decoration: none;
+      padding: 0.75rem 1.5rem;
       border-radius: 6px;
       font-weight: bold;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
-    .nav-btn:hover {
+    .nav-buttons a:hover {
       background-color: #b37e00;
     }
 
@@ -105,17 +99,23 @@
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: auto;
     }
 
     @media (max-width: 768px) {
-      .tool-columns {
+      .toolset-content {
         flex-direction: column;
-        align-items: center;
+        text-align: left;
       }
 
       .tool-column {
         width: 100%;
-        text-align: left;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
       }
     }
   </style>
@@ -123,11 +123,10 @@
 <body>
   <header>
     <h1>My Tech Stack</h1>
-    <p>The software and platforms I’ve mastered across industries and roles.</p>
   </header>
 
-  <main>
-    <div class="tool-columns">
+  <main class="toolset-container">
+    <div class="toolset-content">
       <div class="tool-column">
         <h3>Data Science & Analytics</h3>
         <ul>
@@ -151,7 +150,7 @@
       </div>
 
       <div class="tool-column">
-        <h3>Project & Work Tools by Experience</h3>
+        <h3>Project & Work Tools</h3>
         <ul>
           <li>Infineon: MS Project, Jira, Confluence</li>
           <li>Joynext: Technical reporting, task tracking tools</li>
@@ -159,12 +158,12 @@
         </ul>
       </div>
     </div>
-
-    <div class="nav-buttons">
-      <a href="index.html" class="nav-btn">← Back to Home</a>
-      <a href="experience.html" class="nav-btn">Next: My Journey →</a>
-    </div>
   </main>
+
+  <div class="nav-buttons">
+    <a href="index.html">&larr; Back to Home</a>
+    <a href="experience.html">Next: My Journey &rarr;</a>
+  </div>
 
   <footer>
     <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>

@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>About Me | Tejal Sungra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Arial', sans-serif;
       background-color: #fcfcfc;
       color: #333;
@@ -17,44 +17,75 @@
     }
 
     header {
-      background-color: #c62828; /* About Me card color */
+      background-color: #c62828;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
 
-    main {
-      flex: 1;
+    .about-container {
+      background: #f4f7f5;
       padding: 3rem 1.5rem;
-      max-width: 800px;
-      margin: auto;
+      display: flex;
+      justify-content: center;
     }
 
-    .tagline {
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: 1100px;
+      gap: 2rem;
+    }
+
+    .about-text {
+      flex: 1 1 500px;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
       color: #c62828;
-      text-align: center;
+      margin-bottom: 1rem;
     }
 
-    p {
-      font-size: 1.05rem;
-      line-height: 1.7;
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
       margin-bottom: 1.5rem;
-      text-align: left;
+      text-align: justify;
+    }
+
+    .about-image {
+      flex: 1 1 300px;
+      max-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
     }
 
     footer {
-      background-color: #004d40;
+      background-color: #c62828;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: auto;
     }
 
-    @media (max-width: 600px) {
-      main {
-        padding: 2rem 1rem;
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .about-text p {
+        text-align: left;
       }
     }
   </style>
@@ -64,14 +95,21 @@
     <h1>About Me</h1>
   </header>
 
-  <main>
-    <p class="tagline">Green Engineer | Data Analyst | Sustainability Strategist</p>
-
-    <p>Hello! I'm Tejal — passionate about combining technology, sustainability, and strategy to make a measurable difference. I specialize in end-to-end sustainable solutions, including life cycle analysis, SDG integration, and data-driven insights.</p>
-
-    <p>My background blends environmental engineering with digital tools like Python, Power BI, and OpenLCA. I love building solutions that simplify complex sustainability challenges — whether it's carbon tracking, supply chain transparency, or communicating ESG impact through dashboards and storytelling.</p>
-
-    <p>This portfolio is where I document my independent learning, technical growth, and hands-on projects. It’s not just a collection of work — it’s a living proof of how I design for impact. 🌍</p>
+  <main class="about-container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Hello, I'm Tejal 🌿</h2>
+        <p>
+          I'm a Green Engineer and Sustainability Strategist with a passion for building data-driven, environmentally responsible solutions. With a background in environmental engineering and digital tools like Python, Power BI, and OpenLCA, I specialize in lifecycle analysis, ESG reporting, and sustainability tech.
+        </p>
+        <p>
+          This portfolio highlights my self-initiated projects that simplify complex sustainability challenges—be it carbon tracking, supply chain transparency, or impact storytelling. My mission is to create clarity, creativity, and measurable value for a greener future.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="asset/images/tejal_profile.jpg" alt="Tejal Sungra" />
+      </div>
+    </div>
   </main>
 
   <footer>

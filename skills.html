@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sustainable Impact Tech Stack | Tejal Sungra</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>My Professional Toolset | Tejal Sungra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #fcfcfc;
+      background: #fcfcfc;
       color: #333;
       display: flex;
       flex-direction: column;
@@ -17,119 +17,156 @@
     }
 
     header {
-      background-color: #e0b44b; /* Mustard color */
+      background-color: #d4a300; /* mustard yellow */
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
 
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
     main {
       flex: 1;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
+      padding: 2rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
     }
 
     h2 {
-      color: #c62828;
-      font-size: 2rem;
+      color: #d4a300;
       margin-bottom: 1rem;
+      border-bottom: 2px solid #d4a300;
+      padding-bottom: 0.5rem;
     }
 
-    p.description {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 2rem;
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
     }
 
-    ul.tool-list {
-      list-style-type: none;
-      padding: 0;
+    .tool {
+      background: #fff8e1;
+      border: 1px solid #d4a300;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      font-size: 0.95rem;
     }
 
-    .tool-list li {
-      background: #fff6e0;
-      border-left: 5px solid #e0b44b;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      font-size: 1.05rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
-    .certificate {
-      margin: 2rem 0;
+    .cta {
+      margin-top: 2rem;
       text-align: center;
     }
 
-    .certificate img {
-      max-width: 80%;
-      height: auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .cta-button {
+      background-color: #d4a300;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .navigation-buttons {
-      text-align: center;
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
       margin-top: 2rem;
     }
 
-    .navigation-buttons a {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      margin: 0 1rem;
-      background-color: #e0b44b;
+    .nav-buttons a {
+      background-color: #333;
       color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .navigation-buttons a:hover {
-      background-color: #c89b30;
+      font-size: 0.9rem;
     }
 
     footer {
-      background-color: #e0b44b;
+      background-color: #d4a300;
       color: white;
       text-align: center;
       padding: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      main {
-        padding: 2rem 1rem;
-      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sustainable Impact Tech Stack</h1>
+    <h1>My Professional Toolset</h1>
   </header>
 
   <main>
-    <h2>Tools That Power My Projects</h2>
-    <p class="description">
-      I use a curated set of tools that bridge sustainability strategy and technology. These tools help me turn complex challenges into data-driven, measurable impact. Here’s a look into my digital toolbox:
-    </p>
+    <section>
+      <h2>Data Science & Analysis Tools</h2>
+      <div class="tools-grid">
+        <div class="tool">Python</div>
+        <div class="tool">Pandas</div>
+        <div class="tool">NumPy</div>
+        <div class="tool">Matplotlib</div>
+        <div class="tool">Seaborn</div>
+        <div class="tool">Scikit-learn</div>
+        <div class="tool">Streamlit</div>
+        <div class="tool">Power BI</div>
+        <div class="tool">Tableau</div>
+        <div class="tool">Excel</div>
+      </div>
+    </section>
 
-    <ul class="tool-list">
-      <li><strong>Python</strong> — for data automation, ML models, and sustainability analytics</li>
-      <li><strong>Power BI</strong> — interactive dashboards for ESG storytelling and impact reporting</li>
-      <li><strong>OpenLCA</strong> — life cycle assessments and carbon footprint modeling</li>
-      <li><strong>SQL</strong> — querying sustainability systems and databases</li>
-      <li><strong>Streamlit</strong> — deploying ML-driven sustainability apps</li>
-    </ul>
+    <section>
+      <h2>Engineering, Automation & Analytics</h2>
+      <div class="tools-grid">
+        <div class="tool">OpenLCA</div>
+        <div class="tool">KNIME</div>
+        <div class="tool">SQL</div>
+        <div class="tool">AWS</div>
+        <div class="tool">MySQL</div>
+        <div class="tool">Oracle</div>
+        <div class="tool">Selenium</div>
+        <div class="tool">BeautifulSoup</div>
+      </div>
+    </section>
 
-    <div class="certificate">
-      <p><em>Here’s a snapshot of one of my certifications:</em></p>
-      <!-- Optional Certificate Image -->
-      <!-- <img src="asset/images/certificates/python_certificate.png" alt="Python Certificate"> -->
+    <section>
+      <h2>ERP, Office & Project Tools</h2>
+      <div class="tools-grid">
+        <div class="tool">SAP</div>
+        <div class="tool">Oracle BI</div>
+        <div class="tool">MS Project</div>
+        <div class="tool">MS Office</div>
+        <div class="tool">Google Workspace</div>
+        <div class="tool">JIRA</div>
+        <div class="tool">Confluence</div>
+        <div class="tool">Agile & Scrum</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Applied at Companies & Institutions</h2>
+      <div class="tools-grid">
+        <div class="tool">Infineon (KNIME, Oracle, BI Portal)</div>
+        <div class="tool">Joynext (JIRA, Planning Tools)</div>
+        <div class="tool">HTW Dresden, FH Zwickau (OpenLCA, SAP)</div>
+        <div class="tool">WBS Bootcamp (Data Science Full Stack)</div>
+      </div>
+    </section>
+
+    <div class="cta">
+      <p>Want to know how I applied these tools in action?</p>
+      <a href="impact.html" class="cta-button">Explore My Impact</a>
     </div>
 
-    <div class="navigation-buttons">
+    <div class="nav-buttons">
       <a href="index.html">← Back to Home</a>
-      <a href="experience.html">Next: Experience →</a>
+      <a href="experience.html">Next: My Journey →</a>
     </div>
   </main>
 

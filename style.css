@@ -1,338 +1,101 @@
+Style.css
 /* Base setup */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', Arial, sans-serif; /* Using Inter if linked, fallback to Arial */
-    background: #F9F9F9; /* Light neutral background */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    color: #333333; /* Dark gray for general text */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-    background-color: #006400; /* Primary Green */
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
-
-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    font-weight: 300;
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 2rem;
 }
 
 main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0; /* Add some vertical padding */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Card Grid - Implemented as a 4-column responsive grid */
 .card-grid {
-    display: grid;
-    /* Explicitly define 4 columns for larger screens */
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem; /* Space between cards */
-    padding: 1rem;
-    max-width: 1200px; /* Max width for the grid to allow 4 columns */
-    margin: 0 auto; /* Center the grid */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
 }
 
-/* Individual Card */
+.card-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+/* CARD SETUP */
 .card {
-    position: relative;
-    width: auto; /* Let grid handle width */
-    height: 250px; /* Fixed height for consistency */
-    display: block;
-    overflow: hidden;
-    border-radius: 12px; /* More prominent border-radius for the card itself */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Slightly stronger shadow */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-decoration: none; /* Remove underline from links */
-    color: white; /* Text color on card overlay */
-    font-family: 'Inter', Arial, sans-serif;
-}
-
-.card:hover {
-    transform: translateY(-8px); /* Lift card more on hover */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* More pronounced shadow on hover */
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow: hidden;
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images cover the card area */
-    display: block;
-    filter: brightness(0.7); /* Slightly darken image so text pops */
-    transition: filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.card:hover img {
-    filter: brightness(0.5); /* Darken more on hover */
-}
-
-/* Card Overlay - content and styling for readability and position */
+/* OVERLAY EFFECT */
 .card .card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.65); /* Increased opacity for better text contrast */
-    display: flex;
-    flex-direction: column; /* Stack title and paragraph */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Ensure text itself is centered */
-    opacity: 1; /* Always visible */
-    color: white;
-    padding: 1rem;
-    transition: background-color 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
 }
 
-.card-overlay h3 {
-    margin-top: 0;
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.card-overlay p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    max-width: 85%; /* Constrain paragraph width */
-    font-weight: 300;
+.card:hover .card-overlay {
+  opacity: 1;
 }
 
 /* Footer */
 footer {
-    background-color: #006400; /* Primary Green */
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
 
-/* --- General Page Styles (for About, Skills, etc.) --- */
-/* These styles should ideally be moved from individual HTML files to here */
-
-/* Header for sub-pages */
-.sub-page-header {
-    background-color: #006400; /* Primary Green */
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.sub-page-header h1 {
-    font-size: 2.5rem;
-    margin: 0 0 0.5rem;
-    font-weight: 700;
-}
-
-/* Main content area for sub-pages */
-.content-section {
-    flex: 1;
-    padding: 2rem;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.content-section h2 {
-    font-size: 2rem;
-    color: #006400; /* Primary Green */
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #006400;
-    padding-bottom: 0.3rem;
-    font-weight: 600;
-}
-
-.content-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    text-align: justify;
-}
-
-/* Nav Buttons for sub-pages */
-.nav-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 2rem auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.nav-buttons a {
-    background-color: #006400; /* Primary Green */
-    color: white;
-    text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.nav-buttons a:hover {
-    background-color: #004d00; /* Darker green on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-/* About Me specific styles */
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 1100px;
-    gap: 2rem;
-    background: #f4f7f5; /* Light background for about section */
-    padding: 3rem 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    margin: 2rem auto; /* Center the about section */
-}
-
-.about-image {
-    flex: 1 1 300px;
-    max-width: 350px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-}
-
-.about-text {
-    flex: 1 1 500px;
-}
-
-/* Skills page specific styles */
-.skills-list ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.2rem;
-}
-
-.skills-list li {
-    font-size: 1.05rem;
-    background: #E8F5E9; /* Very light green for skill items */
-    padding: 0.75rem 1rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    color: #333333;
-}
-
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 1024px) { /* Adjust breakpoint for 3 columns on larger tablets/small laptops */
-    .card-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) { /* Adjust breakpoint for 2 columns on tablets */
-    header h1 {
-        font-size: 2.2rem;
-    }
-    header p {
-        font-size: 1rem;
-    }
-
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-        gap: 1rem;
-    }
-    .card {
-        height: 200px; /* Slightly smaller fixed height on tablets */
-    }
-    .card-overlay h3 {
-        font-size: 1.2rem;
-    }
-    .card-overlay p {
-        font-size: 0.8rem;
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-    .about-text p {
-        text-align: left; /* Keep text justified on smaller screens for readability */
-    }
-    .about-image {
-        max-width: 250px; /* Adjust image size */
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .content-section h2 {
-        font-size: 1.6rem;
-    }
-    .content-section p {
-        font-size: 1rem;
-    }
-    .skills-list ul {
-        grid-template-columns: 1fr; /* Stack skills on very small screens */
-    }
-}
-
+/* RESPONSIVE */
 @media (max-width: 480px) {
-    .card-grid {
-        grid-template-columns: 1fr; /* Stack cards on very small screens */
-        gap: 0.8rem;
-    }
-    .card {
-        width: 100%; /* Full width on very small screens */
-        max-width: 280px; /* Limit max width even when full width */
-        height: 180px;
-        border-radius: 8px;
-    }
-    .card-overlay h3 {
-        font-size: 1.1rem;
-    }
-    .card-overlay p {
-        font-size: 0.75rem;
-    }
-    header, footer {
-        padding: 1rem;
-    }
-    .sub-page-header {
-        padding: 1.5rem 1rem;
-    }
-    .sub-page-header h1 {
-        font-size: 2rem;
-    }
-    .content-section {
-        padding: 1rem;
-    }
-    .about-content {
-        padding: 1.5rem 1rem;
-        margin: 1rem auto;
-    }
+  .card {
+    width: 33.33vw;
+    height: 33.33vw;
+  }
+
+  .card .card-overlay {
+    font-size: 0.6rem;
+    padding: 0.5rem;
+  }
 }

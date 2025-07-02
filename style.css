@@ -1,100 +1,166 @@
-/* Base setup */
+/* Base setup - keep unified colors for header/footer */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #fcfcfc;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #F9F9F9; /* Light neutral background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-  background-color: #004d40;
-  color: white;
-  text-align: center;
-  padding: 2rem;
+    background-color: #006400; /* Primary Green */
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
 main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0; /* Add some vertical padding */
 }
 
+/* Card Grid - Use CSS Grid */
 .card-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px min width for cards */
+    gap: 1.5rem; /* Space between cards */
+    padding: 1rem;
+    max-width: 1000px; /* Max width for the grid */
+    margin: 0 auto; /* Center the grid */
 }
 
-.card-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0;
-}
-
-/* CARD SETUP */
+/* Individual Card */
 .card {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0;
-  padding: 0;
-  display: block;
-  overflow: hidden;
+    position: relative;
+    width: auto; /* Let grid handle width */
+    height: 250px; /* Fixed height for consistency */
+    display: block;
+    overflow: hidden;
+    border-radius: 12px; /* More prominent border-radius for the card itself */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Slightly stronger shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color, or set explicitly */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Lift card more on hover */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* More pronounced shadow on hover */
 }
 
 .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the card area */
+    display: block;
+    filter: brightness(0.7); /* Slightly darken image so text pops */
+    transition: filter 0.3s ease;
 }
 
-/* OVERLAY EFFECT */
+.card:hover img {
+    filter: brightness(0.5); /* Darken more on hover */
+}
+
+/* Card Overlay - content and styling */
 .card .card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-  padding: 1rem;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Consistent overlay for text visibility */
+    display: flex;
+    flex-direction: column; /* Stack title and paragraph */
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Always visible for SDG cards */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-.card:hover .card-overlay {
-  opacity: 1;
+.card-overlay h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
 }
+
+.card-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    max-width: 85%; /* Constrain paragraph width */
+}
+
+/* SDG Specific Colors - Add these to your style.css */
+.sdg-4 { background-color: #C5192D; } /* Quality Education */
+.sdg-6 { background-color: #26BDE2; } /* Clean Water and Sanitation */
+.sdg-7 { background-color: #FCC30B; } /* Affordable and Clean Energy */
+.sdg-8 { background-color: #A21942; } /* Decent Work and Economic Growth */
+.sdg-9 { background-color: #FD6925; } /* Industry, Innovation, and Infrastructure */
+.sdg-12 { background-color: #BF8B2E; } /* Responsible Consumption and Production */
+.sdg-17 { background-color: #19486A; } /* Partnerships for the Goals */
+/* Add more as needed for specific projects */
+
+
+/* You can optionally add a subtle border or inner shadow based on SDG color */
+.card.sdg-4 { border: 3px solid #C5192D; } /* Example border */
+/* Or use box-shadow with the SDG color */
+.card.sdg-7 { box-shadow: 0 0 15px 3px rgba(252,195,11,0.5); }
+
 
 /* Footer */
 footer {
-  background-color: #004d40;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+    background-color: #006400; /* Primary Green */
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
 /* RESPONSIVE */
-@media (max-width: 480px) {
-  .card {
-    width: 33.33vw;
-    height: 33.33vw;
-  }
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+        height: 200px;
+    }
+    .card-overlay h3 {
+        font-size: 1.4rem;
+    }
+    .card-overlay p {
+        font-size: 0.85rem;
+    }
+}
 
-  .card .card-overlay {
-    font-size: 0.6rem;
-    padding: 0.5rem;
-  }
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+        gap: 1rem;
+    }
+    .card {
+        height: 180px;
+        border-radius: 8px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
 }

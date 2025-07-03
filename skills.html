@@ -1,78 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>My Professional Toolkit | Tejal Sungra</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>My Toolset | Tejal Sungra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff8e1;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #e0a800;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #c62828;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #c62828;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+    }
+
+    li {
+      font-size: 1.05rem;
+      background: #fff3cd;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+    }
+
+    .button-group a {
+      text-decoration: none;
+      background-color: #c62828;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .button-group a:hover {
+      background-color: #a31515;
+    }
+
+    footer {
+      background-color: #e0a800;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .button-group {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="sub-page-header">
-        <h1>My Professional Toolkit</h1>
-        <p>The software and platforms I’ve mastered across industries and roles.</p>
-    </header>
+  <header>
+    <h1>My Professional Toolkit</h1>
+    <p>The software and platforms I’ve mastered across industries and roles.</p>
+  </header>
 
-    <main class="content-section">
-        <section class="skills-list">
-            <h2>Data Science & Analytics</h2>
-            <ul>
-                <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)</li>
-                <li>Jupyter Notebook & Google Colab</li>
-                <li>SQL (MySQL, PostgreSQL)</li>
-                <li>Tableau & Power BI</li>
-                <li>Streamlit</li>
-            </ul>
-        </section>
+  <main>
+    <section>
+      <h2>Data Science & Analytics</h2>
+      <ul>
+        <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)</li>
+        <li>Jupyter Notebook & Google Colab</li>
+        <li>SQL (MySQL, PostgreSQL)</li>
+        <li>Tableau & Power BI</li>
+        <li>Streamlit</li>
+      </ul>
+    </section>
 
-        <section class="skills-list">
-            <h2>Engineering, ERP & Productivity</h2>
-            <ul>
-                <li>OpenLCA (Life Cycle Assessment)</li>
-                <li>AutoCAD (basics)</li>
-                <li>SAP ERP (Coursework & Familiarity)</li>
-                <li>Microsoft Excel (Advanced), PowerPoint, Word</li>
-                <li>KNIME</li>
-            </ul>
-        </section>
+    <section>
+      <h2>Engineering, ERP & Productivity</h2>
+      <ul>
+        <li>OpenLCA</li>
+        <li>AutoCAD basics</li>
+        <li>SAP ERP (Coursework)</li>
+        <li>Microsoft Excel (Advanced), PowerPoint, Word</li>
+        <li>KNIME</li>
+      </ul>
+    </section>
 
-        <section class="skills-list">
-            <h2>Sustainability Frameworks & Methodologies</h2>
-            <ul>
-                <li>Life Cycle Assessment (LCA)</li>
-                <li>ESG Reporting Principles (GRI, SASB)</li>
-                <li>Circular Economy Principles</li>
-                <li>Carbon Footprinting & GHG Protocol</li>
-                <li>Sustainable Supply Chain Optimization</li>
-            </ul>
-        </section>
+    <section>
+      <h2>Project & Work Tools by Experience</h2>
+      <ul>
+        <li>Infineon: MS Project, Jira, Confluence</li>
+        <li>Joynext: Technical reporting, task tracking tools</li>
+        <li>FH Zwickau & HTW Dresden: Python, SAP, OpenLCA, Excel</li>
+      </ul>
+    </section>
 
-        <section class="skills-list">
-            <h2>Project Management & Collaboration Tools</h2>
-            <ul>
-                <li>MS Project</li>
-                <li>Jira & Confluence (Infineon)</li>
-                <li>Technical Reporting & Task Tracking Tools (Joynext)</li>
-                <li>Version Control (Git/GitHub)</li>
-            </ul>
-        </section>
+    <div class="button-group">
+      <a href="index.html">⬅ Back to Home</a>
+      <a href="impact.html">Next: My Impact ➡</a>
+    </div>
+  </main>
 
-        <section class="skills-list">
-            <h2>Languages</h2>
-            <ul>
-                <li>English (Fluent)</li>
-                <li>German (Intermediate - B2)</li>
-            </ul>
-        </section>
-
-        <div class="nav-buttons">
-            <a href="index.html">⬅ Back to Home</a>
-            <a href="projects.html">Next: My Projects ➡</a>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
+  </footer>
 </body>
 </html>

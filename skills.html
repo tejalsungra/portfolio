@@ -1,60 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>My Professional Toolkit | Tejal Sungra</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Added Google Fonts for 'Inter' -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Removed inline <style> block to use external style.css -->
+  <meta charset="UTF-8" />
+  <title>My Toolset | Tejal Sungra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fcfcfc;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #d09800;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .toolset-container {
+      background: #f4f7f5;
+      padding: 3rem 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .toolset-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: 1100px;
+      gap: 2rem;
+    }
+
+    .tool-column {
+      flex: 1 1 300px;
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .tool-column:nth-child(1) { animation-delay: 0.2s; }
+    .tool-column:nth-child(2) { animation-delay: 0.4s; }
+    .tool-column:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .tool-column h3 {
+      font-size: 1.9rem;
+      color: #d09800;
+      border-bottom: 2px dashed #d09800;
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tool-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tool-column li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tool-column li::before {
+      content: "🛠️";
+      font-size: 1.1rem;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem auto 0 auto;
+    }
+
+    .nav-buttons a {
+      background-color: #d09800;
+      color: white;
+      text-decoration: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #b37e00;
+    }
+
+    footer {
+      background-color: #d09800;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .toolset-content {
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .tool-column {
+        width: 100%;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="sub-page-header">
-        <h1>My Professional Toolkit</h1>
-        <p>The software and platforms I’ve mastered across industries and roles.</p>
-    </header>
+  <header>
+    <h1>My Tech Stack</h1>
+  </header>
 
-    <main class="content-section">
-        <section class="skills-list">
-            <h2>Data Science & Analytics</h2>
-            <ul>
-                <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)</li>
-                <li>Jupyter Notebook & Google Colab</li>
-                <li>SQL (MySQL, PostgreSQL)</li>
-                <li>Tableau & Power BI</li>
-                <li>Streamlit</li>
-            </ul>
-        </section>
+  <main class="toolset-container">
+    <div class="toolset-content">
+      <div class="tool-column">
+        <h3>Data Science & Analytics</h3>
+        <ul>
+          <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, NLP)</li>
+          <li>Jupyter Notebook & Google Colab</li>
+          <li>SQL (MySQL, Oracle)</li>
+          <li>Tableau & Power BI</li>
+          <li>Streamlit</li>
+        </ul>
+      </div>
 
-        <section class="skills-list">
-            <h2>Engineering, ERP & Productivity</h2>
-            <ul>
-                <li>OpenLCA (Life Cycle Assessment)</li>
-                <li>AutoCAD basics</li>
-                <li>SAP ERP (Coursework)</li>
-                <li>Microsoft Excel (Advanced), PowerPoint, Word</li>
-                <li>KNIME</li>
-            </ul>
-        </section>
+      <div class="tool-column">
+        <h3>Engineering, ERP & Productivity</h3>
+        <ul>
+          <li>OpenLCA</li>
+          <li>AutoCAD basics</li>
+          <li>SAP ERP (Coursework)</li>
+          <li>Microsoft Excel, PowerPoint, Word</li>
+          <li>KNIME</li>
+        </ul>
+      </div>
 
-        <section class="skills-list">
-            <h2>Project & Work Tools by Experience</h2>
-            <ul>
-                <li>Infineon: MS Project, Jira, Confluence</li>
-                <li>Joynext: Technical reporting, task tracking tools</li>
-                <li>FH Zwickau & HTW Dresden: Python, SAP, OpenLCA, Excel</li>
-            </ul>
-        </section>
+      <div class="tool-column">
+        <h3>Project & Work Tools</h3>
+        <ul>
+          <li>Infineon: MS Project, Jira, Confluence</li>
+          <li>Joynext: Technical reporting, task tracking tools</li>
+          <li>FH Zwickau & HTW Dresden: Python, SAP, OpenLCA, Excel</li>
+        </ul>
+      </div>
+    </div>
+  </main>
 
-        <div class="button-group">
-            <a href="index.html">⬅ Back to Home</a>
-            <a href="projects.html">Next: My Projects ➡</a>
-        </div>
-    </main>
+  <div class="nav-buttons">
+    <a href="index.html">&larr; Back to Home</a>
+    <a href="experience.html">Next: My Journey &rarr;</a>
+  </div>
 
-    <footer>
-        <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
+  </footer>
 </body>
 </html>

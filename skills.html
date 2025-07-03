@@ -5,11 +5,16 @@
   <title>My Toolset | Tejal Sungra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: 'Arial', sans-serif;
       background-color: #fcfcfc;
       color: #333;
+      height: 100%;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -27,9 +32,15 @@
       font-size: 2.2rem;
     }
 
+    .toolset-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
     .toolset-container {
       background: #f4f7f5;
-      padding: 3rem 1.5rem 2rem;
+      padding: 3rem 1.5rem 1rem;
       display: flex;
       justify-content: center;
     }
@@ -53,14 +64,8 @@
     .tool-column:nth-child(3) { animation-delay: 0.6s; }
 
     @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .tool-column h3 {
@@ -97,7 +102,8 @@
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      margin: 0.5rem auto;
+      padding: 1rem 0 0.5rem;
+      background: #f4f7f5;
     }
 
     .nav-buttons a {
@@ -143,44 +149,46 @@
     <h1>My Tech Stack</h1>
   </header>
 
-  <main class="toolset-container">
-    <div class="toolset-content">
-      <div class="tool-column">
-        <h3>Data Science & Analytics</h3>
-        <ul>
-          <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, NLP)</li>
-          <li>Jupyter Notebook & Google Colab</li>
-          <li>SQL (MySQL, Oracle)</li>
-          <li>Tableau & Power BI</li>
-          <li>Streamlit</li>
-        </ul>
-      </div>
+  <div class="toolset-wrapper">
+    <main class="toolset-container">
+      <div class="toolset-content">
+        <div class="tool-column">
+          <h3>Data Science & Analytics</h3>
+          <ul>
+            <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, NLP)</li>
+            <li>Jupyter Notebook & Google Colab</li>
+            <li>SQL (MySQL, Oracle)</li>
+            <li>Tableau & Power BI</li>
+            <li>Streamlit</li>
+          </ul>
+        </div>
 
-      <div class="tool-column">
-        <h3>Engineering, ERP & Productivity</h3>
-        <ul>
-          <li>OpenLCA</li>
-          <li>AutoCAD basics</li>
-          <li>SAP ERP (Coursework)</li>
-          <li>Microsoft Excel, PowerPoint, Word</li>
-          <li>KNIME</li>
-        </ul>
-      </div>
+        <div class="tool-column">
+          <h3>Engineering, ERP & Productivity</h3>
+          <ul>
+            <li>OpenLCA</li>
+            <li>AutoCAD basics</li>
+            <li>SAP ERP (Coursework)</li>
+            <li>Microsoft Excel, PowerPoint, Word</li>
+            <li>KNIME</li>
+          </ul>
+        </div>
 
-      <div class="tool-column">
-        <h3>Project & Work Tools</h3>
-        <ul>
-          <li>Infineon: MS Project, Jira, Confluence</li>
-          <li>Joynext: Technical reporting, task tracking tools</li>
-          <li>FH Zwickau & HTW Dresden: Python, SAP, OpenLCA, Excel</li>
-        </ul>
+        <div class="tool-column">
+          <h3>Project & Work Tools</h3>
+          <ul>
+            <li>Infineon: MS Project, Jira, Confluence</li>
+            <li>Joynext: Technical reporting, task tracking tools</li>
+            <li>FH Zwickau & HTW Dresden: Python, SAP, OpenLCA, Excel</li>
+          </ul>
+        </div>
       </div>
+    </main>
+
+    <div class="nav-buttons">
+      <a href="index.html">&larr; Back to Home</a>
+      <a href="experience.html">Next: My Journey &rarr;</a>
     </div>
-  </main>
-
-  <div class="nav-buttons">
-    <a href="index.html">&larr; Back to Home</a>
-    <a href="experience.html">Next: My Journey &rarr;</a>
   </div>
 
   <footer>

@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #f4f7f5;
+      background-color: #fcfcfc;
       color: #333;
       display: flex;
       flex-direction: column;
@@ -16,7 +16,7 @@
     }
 
     header {
-      background-color: #43a047; /* Deep green */
+      background-color: #d82c65;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
@@ -27,68 +27,107 @@
       font-size: 2.2rem;
     }
 
-    .connect-container {
+    main {
       flex: 1;
       padding: 3rem 1.5rem;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fdfbfb;
     }
 
-    .connect-container p {
+    main p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
+      text-align: center;
+      max-width: 800px;
+      color: #444;
     }
 
     .download-buttons {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 3rem;
     }
 
     .download-buttons a {
-      background-color: #2e7d32;
+      background-color: #d82c65;
       color: white;
       text-decoration: none;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      font-size: 1.1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
     }
 
     .download-buttons a:hover {
-      background-color: #1b5e20;
+      background-color: #b0214f;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .nav-buttons a {
+      background-color: #d82c65;
+      color: white;
+      text-decoration: none;
+      padding: 0.65rem 1.3rem;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #b0214f;
     }
 
     footer {
-      background-color: #43a047;
+      background-color: #d82c65;
       color: white;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .download-buttons,
+      .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Let’s Connect</h1>
   </header>
 
-  <main class="connect-container">
-    <p>If you'd like to keep a copy of my background or reach out, feel free to download the latest version of my resume and full portfolio overview below.</p>
+  <main>
+    <p>Thank you for visiting! If you’d like to review or share my work, feel free to download my resume or a full snapshot of this portfolio.</p>
 
     <div class="download-buttons">
-      <!-- Replace href paths with actual file locations -->
-      <a href="asset/downloads/Tejal_Sungra_Resume.pdf" download>📄 Download Resume</a>
-      <a href="asset/downloads/Tejal_Sungra_Portfolio_Info.pdf" download>📘 Download Full Portfolio</a>
+      <a href="assets/files/Tejal_Resume.pdf" download>📄 Download My Resume</a>
+      <a href="assets/files/Tejal_Portfolio_Summary.pdf" download>📘 Download Portfolio Summary</a>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="projects.html">&larr; Back to My Impact</a>
+      <a href="index.html">Home 🏠</a>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
   </footer>
+
 </body>
 </html>
-

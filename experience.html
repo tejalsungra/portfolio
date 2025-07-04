@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #f4f7f5;
+      background-color: #fcfcfc;
       color: #333;
       display: flex;
       flex-direction: column;
@@ -16,7 +16,7 @@
     }
 
     header {
-      background-color: #0D47A1; /* Deep blue */
+      background-color: #002147; /* Deep blue */
       color: white;
       text-align: center;
       padding: 2rem 1rem;
@@ -27,31 +27,36 @@
       font-size: 2.2rem;
     }
 
-    .journey-container {
+    main {
+      flex: 1;
       padding: 3rem 1.5rem;
       max-width: 1100px;
       margin: auto;
     }
 
-    .experience {
-      margin-bottom: 2.5rem;
+    .job {
+      margin-bottom: 3rem;
+      background-color: #f4f7f5;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
-    .experience h2 {
-      color: #0D47A1;
-      font-size: 1.6rem;
+    .job h2 {
+      margin-top: 0;
+      color: #002147;
+    }
+
+    .job h3 {
       margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: normal;
+      color: #555;
     }
 
-    .experience h3 {
-      margin: 0.2rem 0;
-      font-size: 1.2rem;
-      color: #444;
-    }
-
-    .experience p {
-      line-height: 1.6;
-      margin-top: 0.5rem;
+    .job p {
+      margin: 0.5rem 0 1rem;
+      line-height: 1.7;
       font-size: 1rem;
       text-align: justify;
     }
@@ -60,11 +65,11 @@
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      margin: 2rem auto 0.5rem;
+      margin: 2rem auto;
     }
 
     .nav-buttons a {
-      background-color: #0D47A1;
+      background-color: #002147;
       color: white;
       text-decoration: none;
       padding: 0.75rem 1.5rem;
@@ -74,15 +79,14 @@
     }
 
     .nav-buttons a:hover {
-      background-color: #09306e;
+      background-color: #00162e;
     }
 
     footer {
-      background-color: #0D47A1;
+      background-color: #002147;
       color: white;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
       margin-top: auto;
     }
 
@@ -101,52 +105,43 @@
     <h1>My Journey</h1>
   </header>
 
-  <main class="journey-container">
-
-    <div class="experience">
-      <h2>JOYNEXT</h2>
-      <h3>Technical Project Management<br>Nov 2024 – Present</h3>
-      <p>Currently supporting project coordination and reporting for automotive software and hardware projects, focusing on technical timelines, reporting tools, and stakeholder communication across departments.</p>
-    </div>
-
-    <div class="experience">
-      <h2>Infineon Technologies</h2>
-      <h3>Werkstudent – Data Analytics, PPM Office<br>Apr 2023 – Sep 2024</h3>
+  <main>
+    <div class="job">
+      <h2>Technical Project Management – JOYNEXT</h2>
+      <h3>Nov 2024 – Present · 9 months</h3>
       <p>
-        - Built KNIME-based data pipelines to automate ETL processes.<br>
-        - Uploaded data to Oracle DB and designed Tableau dashboards for KPIs.<br>
-        - Created a BI portal tailored to multiple internal users for better data access and analysis.<br>
-        <strong>Skills:</strong> Tableau, KNIME, SQL, Oracle, KPI monitoring, Automation.
+        Currently working on cross-functional tasks involving coordination, task tracking, and technical documentation support at JOYNEXT. Focused on project delivery frameworks in automotive systems and stakeholder alignment.
       </p>
     </div>
 
-    <div class="experience">
-      <h2>ZAFT e.V., HTW Dresden</h2>
-      <h3>Research Assistant<br>Jan 2021 – May 2021</h3>
+    <div class="job">
+      <h2>Werkstudent – Data Analytics Project PMO – Infineon Technologies</h2>
+      <h3>Apr 2023 – Sep 2024 · 1 year 6 months | Dresden, Germany</h3>
       <p>
-        - Independently performed and analyzed 5+ geotechnical soil tests (sand/silt).<br>
-        - Documented results and updated internal databases for a PhD research reference.<br>
-        - Compiled lab manuals for repeatability and training.<br>
-        <strong>Skills:</strong> Soil testing, Excel, Research documentation, Lab management.
+        Built data pipelines using KNIME to automate ETL workflows, ensuring streamlined data delivery to Oracle DB. Created Tableau dashboards for KPIs and built a BI portal to support diverse user groups in the Project Portfolio Management Office.
       </p>
     </div>
 
-    <div class="experience">
-      <h2>HTW Dresden</h2>
-      <h3>Student Assistant – Agriculture Department<br>Jun 2020 – Feb 2021</h3>
+    <div class="job">
+      <h2>Research Assistant – ZAFT eV, HTW Dresden</h2>
+      <h3>Jan 2021 – May 2021 · 5 months | Dresden, Germany</h3>
       <p>
-        - Assisted in CN analysis prep and sorted field samples (sunflower/weed separation).<br>
-        - Measured water content and logged sample quality data.<br>
-        - Supported research through accurate data entry and teamwork.<br>
-        <strong>Skills:</strong> Sample handling, teamwork, data entry, analysis.
+        Conducted geotechnical tests on sand and silt to compare physical properties for a PhD research. Managed and analyzed experiments, updated internal lab databases, and wrote a lab testing manual.
       </p>
     </div>
 
+    <div class="job">
+      <h2>Student Assistant – HTW Dresden (Agricultural Research)</h2>
+      <h3>Jun 2020 – Feb 2021 · 9 months | Dresden, Germany</h3>
+      <p>
+        Assisted in CN analysis of soil samples and weed sorting during field collections. Prepared samples, recorded plant growth data in Excel, and supported research on sunflower cultivation and soil quality.
+      </p>
+    </div>
   </main>
 
   <div class="nav-buttons">
     <a href="skills.html">&larr; Back to Toolset</a>
-    <a href="projects.html">Next: My Impact &rarr;</a>
+    <a href="projects.html">Next: My Projects &rarr;</a>
   </div>
 
   <footer>

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Let’s Connect | Tejal Sungra</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Let's Connect | Tejal Sungra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #fcfcfc;
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
       color: #333;
       display: flex;
       flex-direction: column;
@@ -16,112 +17,81 @@
     }
 
     header {
-      background-color: #d82c65;
+      background-color: #c2185b;
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-
-    main {
+    .connect-container {
       flex: 1;
+      background-color: #fce4ec;
       padding: 3rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #fdfbfb;
-    }
-
-    main p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      text-align: center;
       max-width: 800px;
-      color: #444;
+      margin: auto;
+      border-radius: 12px;
     }
 
-    .download-buttons {
+    .connect-container h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #c2185b;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
       display: flex;
+      justify-content: center;
       gap: 2rem;
       flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
     }
 
-    .download-buttons a {
-      background-color: #d82c65;
+    .btn {
+      background-color: #c2185b;
       color: white;
+      padding: 0.8rem 1.6rem;
       text-decoration: none;
-      padding: 0.75rem 1.5rem;
+      border: none;
       border-radius: 6px;
       font-weight: bold;
-      font-size: 1rem;
+      cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
-    .download-buttons a:hover {
-      background-color: #b0214f;
-    }
-
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .nav-buttons a {
-      background-color: #d82c65;
-      color: white;
-      text-decoration: none;
-      padding: 0.65rem 1.3rem;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
-
-    .nav-buttons a:hover {
-      background-color: #b0214f;
+    .btn:hover {
+      background-color: #ad1457;
     }
 
     footer {
-      background-color: #d82c65;
+      background-color: #c2185b;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: auto;
     }
 
     @media (max-width: 768px) {
-      .download-buttons,
-      .nav-buttons {
+      .buttons {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Let’s Connect</h1>
+    <h1>Let's Connect</h1>
   </header>
 
-  <main>
-    <p>Thank you for visiting! If you’d like to review or share my work, feel free to download my resume or a full snapshot of this portfolio.</p>
+  <main class="connect-container" id="portfolioContent">
+    <h2>Reach out, collaborate, or explore my work!</h2>
+    <div class="buttons">
+      <!-- Resume button -->
+      <a class="btn" href="./Tejal_Sungra_resume_data.pdf" download>Download My Resume</a>
 
-    <div class="download-buttons">
-      <a href="assets/files/Tejal_Resume.pdf" download>📄 Download My Resume</a>
-      <a href="assets/files/Tejal_Portfolio_Summary.pdf" download>📘 Download Portfolio Summary</a>
-    </div>
-
-    <div class="nav-buttons">
-      <a href="projects.html">&larr; Back to My Impact</a>
-      <a href="index.html">Home 🏠</a>
+      <!-- Portfolio Snapshot button -->
+      <button class="btn" onclick="downloadPortfolioPDF()">Download Portfolio Snapshot</button>
     </div>
   </main>
 
@@ -129,5 +99,17 @@
     <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
   </footer>
 
+  <script>
+    function downloadPortfolioPDF() {
+      const element = document.getElementById('portfolioContent');
+      html2pdf().from(element).set({
+        margin: 1,
+        filename: 'Tejal_Sungra_Portfolio_Snapshot.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      }).save();
+    }
+  </script>
 </body>
 </html>

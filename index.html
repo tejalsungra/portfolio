@@ -1,152 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>My Journey | Tejal Sungra</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #fcfcfc;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: #002147; /* Deep blue */
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-
-    main {
-      flex: 1;
-      padding: 3rem 1.5rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .job {
-      margin-bottom: 3rem;
-      background-color: #f4f7f5;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
-    .job h2 {
-      margin-top: 0;
-      color: #002147;
-    }
-
-    .job h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-      font-weight: normal;
-      color: #555;
-    }
-
-    .job p {
-      margin: 0.5rem 0 1rem;
-      line-height: 1.7;
-      font-size: 1rem;
-      text-align: justify;
-    }
-
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 2rem auto;
-    }
-
-    .nav-buttons a {
-      background-color: #002147;
-      color: white;
-      text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    .nav-buttons a:hover {
-      background-color: #00162e;
-    }
-
-    footer {
-      background-color: #002147;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: auto;
-    }
-
-    @media (max-width: 768px) {
-      .nav-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Tejal Sungra | Eco-SDG Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <h1>My Journey</h1>
-  </header>
-
-  <main>
-    <div class="job">
-      <h2>Technical Project Management – JOYNEXT</h2>
-      <h3>Nov 2024 – Present · 9 months</h3>
-      <p>
-        Currently working on cross-functional tasks involving coordination, task tracking, and technical documentation support at JOYNEXT. Focused on project delivery frameworks in automotive systems and stakeholder alignment.
-      </p>
-    </div>
-
-    <div class="job">
-      <h2>Werkstudent – Data Analytics Project PMO – Infineon Technologies</h2>
-      <h3>Apr 2023 – Sep 2024 · 1 year 6 months | Dresden, Germany</h3>
-      <p>
-        Built data pipelines using KNIME to automate ETL workflows, ensuring streamlined data delivery to Oracle DB. Created Tableau dashboards for KPIs and built a BI portal to support diverse user groups in the Project Portfolio Management Office.
-      </p>
-    </div>
-
-    <div class="job">
-      <h2>Research Assistant – ZAFT eV, HTW Dresden</h2>
-      <h3>Jan 2021 – May 2021 · 5 months | Dresden, Germany</h3>
-      <p>
-        Conducted geotechnical tests on sand and silt to compare physical properties for a PhD research. Managed and analyzed experiments, updated internal lab databases, and wrote a lab testing manual.
-      </p>
-    </div>
-
-    <div class="job">
-      <h2>Student Assistant – HTW Dresden (Agricultural Research)</h2>
-      <h3>Jun 2020 – Feb 2021 · 9 months | Dresden, Germany</h3>
-      <p>
-        Assisted in CN analysis of soil samples and weed sorting during field collections. Prepared samples, recorded plant growth data in Excel, and supported research on sunflower cultivation and soil quality.
-      </p>
-    </div>
-  </main>
-
-  <div class="nav-buttons">
-    <a href="skills.html">&larr; Back to Toolset</a>
-    <a href="projects.html">Next: My Projects &rarr;</a>
+    <header>
+        <h1>Tejal Sungra</h1>
+        <p>Green Engineer | Sustainability Strategist | Data Science & ML Enthusiast</p>
+    </header>
+    <main>
+       <section class="card-grid">
+  <div class="card-row top-row">
+   
+<a href="about.html" class="card">
+  <img src="asset/images/card/aboutme_card.png" alt="About Me">
+  <div class="card-overlay">
+    <p>Curious about my journey?</p>
+   
   </div>
+</a>
 
-  <footer>
-    <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
-  </footer>
 
+    <div class="card-row">
+  <a href="skills.html" class="card">
+    <img src="asset/images/card/skills_card.png" alt="Skills" />
+    <div class="card-overlay"><p>Explore my skill set</p></div>
+  </a>
+  <a href="experience.html" class="card">
+    <img src="asset/images/card/experience_card.png" alt="Experience" />
+    <div class="card-overlay"><p>Discover my work journey</p></div>
+  </a>
+  <a href="projects.html" class="card">
+    <img src="asset/images/card/projects_card.png" alt="Projects" />
+    <div class="card-overlay"><p>View my sustainability projects</p></div>
+  </a>
+</div>
+
+<div class="card-row bottom-row">
+  <a href="education.html" class="card">
+    <img src="asset/images/card/Education_card.png" alt="Education" />
+    <div class="card-overlay"><p>See my academic background</p></div>
+  </a>
+  <a href="contact.html" class="card">
+    <img src="asset/images/card/contact_card.png" alt="Contact" />
+    <div class="card-overlay"><p>Let’s get in touch</p></div>
+  </a>
+</div>
+
+  </div>
+</section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
+    </footer>
 </body>
 </html>

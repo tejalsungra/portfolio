@@ -62,11 +62,28 @@
     .btn:hover {
       background-color: #ad1457;
     }
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  margin: 0.5rem 0 1rem;
-}
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      margin: 0.5rem auto 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-buttons .btn {
+      background-color: #c2185b;
+      color: white;
+      padding: 0.75rem 1.6rem;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-buttons .btn:hover {
+      background-color: #ad1457;
+    }
+
     footer {
       background-color: #c2185b;
       color: white;
@@ -79,6 +96,12 @@
       .buttons {
         flex-direction: column;
         align-items: center;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
       }
     }
   </style>
@@ -98,9 +121,12 @@
       <button class="btn" onclick="downloadPortfolioPDF()">Download Portfolio Snapshot</button>
     </div>
   </main>
-<div class="nav-buttons">
-  <a href="index.html" class="btn">← Back to Home</a>
-</div>
+
+  <!-- Home button -->
+  <div class="nav-buttons">
+    <a href="index.html" class="btn">← Back to Home</a>
+  </div>
+
   <footer>
     <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
   </footer>

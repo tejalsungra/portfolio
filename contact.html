@@ -109,22 +109,9 @@
     .nav-buttons {
       display: flex;
       justify-content: center;
-      margin: 0.5rem auto 1.5rem;
+      margin: 1.5rem auto 0;
       flex-wrap: wrap;
       gap: 1rem;
-    }
-
-    .nav-buttons .btn {
-      background-color: #c2185b;
-      color: white;
-      padding: 0.75rem 1.6rem;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .nav-buttons .btn:hover {
-      background-color: #ad1457;
     }
 
     footer {
@@ -189,13 +176,13 @@
         <a class="btn" href="./Tejal_Sungra_resume_data.pdf" download>Download Resume (PDF)</a>
       </div>
     </div>
+
+    <!-- Nav buttons now inside main and using .btn styles -->
+    <div class="nav-buttons">
+      <a href="education.html" class="btn">&larr; Back</a>
+      <a href="index.html" class="btn">Home</a>
+    </div>
   </main>
-
-  <div class="nav-buttons">
-   <a href="education.html">&larr; Back</a>
-   <a href="index.html">Home</a>
-</div>
-
 
   <footer>
     <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>

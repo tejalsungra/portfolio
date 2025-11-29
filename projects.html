@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>My Impact | Tejal Sungra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
       margin: 0;
@@ -41,39 +42,42 @@
       color: #444;
     }
 
-    .project-section {
-      margin-bottom: 3rem;
+    /* Unified card style (same layout as My Foundation & My Journey) */
+    .content-block {
+      background: #e8f5e9; /* light green content background */
+      border-left: 5px solid #2e7d32; /* green accent */
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .content-block h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.3rem;
+      color: #1b5e20;
+    }
+
+    .content-block p {
+      margin: 0.2rem 0 0.7rem;
+      font-weight: bold;
+    }
+
+    .content-block ul {
+      padding-left: 1.3rem;
+      margin: 0.3rem 0;
+    }
+
+    .content-block ul li {
+      margin-bottom: 0.5rem;
     }
 
     .project-section h2 {
       color: #2e7d32;
       border-bottom: 2px solid #c8e6c9;
       padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .project {
-      background: #e8f5e9;
-      padding: 1.2rem;
-      border-radius: 8px;
       margin-bottom: 1.2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .project h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.2rem;
-      color: #1b5e20;
-    }
-
-    .project p {
-      margin: 0.2rem 0 0.7rem;
-    }
-
-    .project ul {
-      padding-left: 1.2rem;
-      margin: 0.3rem 0;
+      font-size: 1.5rem;
     }
 
     .nav-buttons {
@@ -88,9 +92,14 @@
       background-color: #2e7d32;
       color: white;
       text-decoration: none;
-      padding: 0.65rem 1.4rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 6px;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #1b5e20;
     }
 
     footer {
@@ -100,8 +109,10 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
+
   </style>
 </head>
+
 <body>
   <header>
     <h1>My Impact</h1>
@@ -112,156 +123,33 @@
       I approach every project as a way to solve real sustainability challenges using tech, strategy, and data. Here's a selection of my academic, bootcamp, and personal projects.
     </div>
 
-   
-    <!-- Section 1: Projects I loved Working On -->
-   <section class="project-section">
-  <h2>Personal Projects</h2>
-
-  <div class="project">
-    <h3>Climate Sentiment Analyzer</h3>
-    <p><strong>Tech:</strong> Python, NLP, Streamlit, Twitter API</p>
-    <ul>
-      <li>Built an AI tool to analyze global sentiment on climate change</li>
-      <li>Compared sentiment across four countries using live Twitter data</li>
-      <li>Created word clouds and engagement graphs for regional insights</li>
-      <li><a href="https://github.com/tejalsungra/final_project_sentiment_analyser" target="_blank">View GitHub Repository</a></li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Carbon Tracker Dashboard (In Progress)</h3>
-    <p><strong>Tech:</strong> Power BI, Excel, CSRD metrics</p>
-    <ul>
-      <li>Creating ESG-style carbon visualizations for Scope 1–3 tracking</li>
-      <li>Designed for small companies with no reporting baseline</li>
-    </ul>
-  </div>
-
-</section>
-
-    
-    <!-- Section 2: University Projects -->
-<section class="project-section">
-  <h2>University Projects</h2>
-
-  <div class="project">
-    <h3>Geotechnical Data Modeling & Soil Behaviour Analysis – HTW Dresden</h3>
-    <p><strong>Tools:</strong> Triaxial Test, MS Excel, Regression Analysis</p>
-    <ul>
-      <li>Processed and analyzed experimental soil data using statistical and linear modeling methods</li>
-      <li>Compared mechanical behaviour of sand and silt through stress–strain curves and trend analysis</li>
-      <li>Applied regression techniques to estimate shear strength parameters and validate laboratory results</li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Life Cycle Assessment Case Study – FH Zwickau</h3>
-    <p><strong>Tools:</strong> OpenLCA, ISO 14040, GHG Protocol</p>
-    <ul>
-      <li>Developed cradle-to-grave LCA model including material sourcing, manufacturing, transport and end-of-life</li>
-      <li>Quantified carbon and water impacts using emission factors and impact assessment methods</li>
-      <li>Identified key sustainability hotspots and proposed improvement strategies aligned with circular economy principles</li>
-    </ul>
-  </div>
-
-</section>
-
-
-    <!-- Section 3: Bootcamp Projects -->
+    <!-- PERSONAL PROJECTS -->
     <section class="project-section">
-      <h2>WBS Coding School Projects</h2>
-      <div class="project">
-  <h3>E-Commerce Market Entry Strategy (Brazil)</h3>
-  <p><strong>Tech:</strong> Python, Excel, Market Data Analysis, Supply Chain Mapping</p>
-  <ul>
-    <li>Analyzed Brazilian e-commerce market and consumer trends to support Eniac’s expansion strategy</li>
-    <li>Evaluated delivery performance, marketplace logistics, and potential SaaS partner (Magist)</li>
-    <li>Provided data-backed recommendations for international expansion and supply chain risk assessment</li>
-  </ul>
-</div>
-<div class="project">
-  <h3>Pricing & Discount Analytics</h3>
-  <p><strong>Tech:</strong> Python, Pandas, Matplotlib, Data Cleaning</p>
-  <ul>
-    <li>Analyzed internal pricing, discount patterns, and seasonal sales trends using Python</li>
-    <li>Assessed consumer behaviour and revenue impact to recommend optimized discount strategies</li>
-    <li>Generated insights for long-term pricing decisions and marketing planning</li>
-  </ul>
-</div>
-<div class="project">
-  <h3>A/B Testing for Conversion Rate Optimization</h3>
-  <p><strong>Tech:</strong> Python, Pandas, SciPy, Google Analytics</p>
-  <ul>
-    <li>Designed and executed A/B tests on Shopify homepage interface elements</li>
-    <li>Formulated hypotheses and defined CTR-based success metrics</li>
-    <li>Improved user engagement and conversion rates through statistically significant UX changes</li>
-  </ul>
-</div>
-<div class="project">
-  <h3>Cloud Data Pipeline for Mobility Analytics</h3>
-  <p><strong>Tech:</strong> Python, SQL, Google Cloud (Cloud Functions, Scheduler, MySQL)</p>
-  <ul>
-    <li>Built and automated a cloud-based pipeline to collect and transform e-scooter mobility data</li>
-    <li>Integrated real-time external APIs and stored processed data in GCP MySQL</li>
-    <li>Enabled scalable, automated data flow for predictive analytics and operational insights</li>
-  </ul>
-</div>
+      <h2>Personal Projects</h2>
 
-
-      <div class="project">
-        <h3>Spotify Playlist Clustering</h3>
-        <p><strong>Tech:</strong> K-Means, PCA, Python</p>
+      <div class="content-block">
+        <h3>Climate Sentiment Analyzer</h3>
+        <p><strong>Tech:</strong> Python, NLP, Streamlit, Twitter API</p>
         <ul>
-          <li>Clustered songs based on audio features</li>
-          <li>Explored unsupervised ML for personalized music discovery</li>
+          <li>Built an AI tool to analyze global sentiment on climate change</li>
+          <li>Compared sentiment across four countries using live Twitter data</li>
+          <li>Created word clouds and engagement graphs for regional insights</li>
+          <li><a href="https://github.com/tejalsungra/final_project_sentiment_analyser" target="_blank">View GitHub Repository</a></li>
         </ul>
       </div>
 
-      <div class="project">
-        <h3>Housing Price Prediction</h3>
-        <p><strong>Tech:</strong> Regression, Streamlit, Tableau</p>
+      <div class="content-block">
+        <h3>Carbon Tracker Dashboard (In Progress)</h3>
+        <p><strong>Tech:</strong> Power BI, Excel, CSRD metrics</p>
         <ul>
-          <li>Built a web app for predicting home prices using ML</li>
-          <li>Integrated Streamlit UI and Tableau dashboards</li>
-        </ul>
-      </div>
-      <div class="project">
-  <h3>Cloud Data Warehouse & BI Dashboards</h3>
-  <p><strong>Tech:</strong> BigQuery, Google Sheets, Looker Studio, SQL</p>
-  <ul>
-    <li>Built a scalable BigQuery data warehouse for sales, customers, and product data</li>
-    <li>Created automated Google Sheets reports with real-time pipeline integration</li>
-    <li>Developed interactive Looker Studio dashboards for business insights</li>
-  </ul>
-</div>
-
-    </section>
-
-    
-
-
-    <!-- Section 4: Research Work -->
-    <section class="project-section">
-      <h2>Research</h2>
-
-      <div class="project">
-        <h3>Research Assistant – Soil & Crop Study</h3>
-        <p><strong>Institution:</strong> HTW Dresden, ZAFT</p>
-        <ul>
-          <li>Collected and processed soil samples for CN analysis</li>
-          <li>Supported sunflower field study and plant–weed classification</li>
+          <li>Creating ESG-style carbon visualizations for Scope 1–3 tracking</li>
+          <li>Designed for small companies with no reporting baseline</li>
         </ul>
       </div>
     </section>
-  </main>
 
-  <div class="nav-buttons">
-    <a href="experience.html">&larr; Back to My Journey</a>
-    <a href="education.html">Next: My Foundation &rarr;</a>
-  </div>
+    <!-- UNIVERSITY PROJECTS -->
+    <section class="project-section">
+      <h2>University Projects</h2>
 
-  <footer>
-    <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>
-  </footer>
-</body>
-</html>
+      <div class="content-block">

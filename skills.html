@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Toolset | Tejal Sungra</title>
+  <title>My Tech Stack | Tejal Sungra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     html, body {
@@ -43,7 +43,16 @@
       padding: 3rem 1.5rem 1rem;
       flex: 1;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .toolset-intro {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+      text-align: center;
+      color: #555;
     }
 
     .toolset-content {
@@ -101,12 +110,12 @@
 
     .tool-column li::before {
       content: "🛠️";
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .nav-buttons {
       background: #f4f7f5;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1rem 1.5rem;
       display: flex;
       justify-content: center;
       gap: 1.5rem;
@@ -120,6 +129,8 @@
       border-radius: 6px;
       font-weight: bold;
       transition: all 0.3s ease;
+      min-width: 120px;
+      text-align: center;
     }
 
     .nav-buttons a:hover {
@@ -147,6 +158,7 @@
       .nav-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
       }
     }
   </style>
@@ -158,36 +170,40 @@
 
   <div class="toolset-wrapper">
     <main class="toolset-container">
+      <p class="toolset-intro">
+        These are the tools I work with across data science, AI, engineering, and sustainability projects.
+      </p>
+
       <div class="toolset-content">
         <div class="tool-column">
           <h3>Data Science & Analytics</h3>
           <ul>
-            <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, NLP)</li>
+            <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, basic NLP)</li>
             <li>Jupyter Notebook & Google Colab</li>
             <li>SQL (MySQL, Oracle)</li>
             <li>Tableau & Power BI</li>
-            <li>Streamlit</li>
+            <li>Streamlit (for lightweight data apps)</li>
           </ul>
         </div>
 
         <div class="tool-column">
-          <h3>Engineering, ERP & Productivity</h3>
+          <h3>Engineering, Sustainability & ERP</h3>
           <ul>
-            <li>OpenLCA</li>
+            <li>OpenLCA (LCA modeling and impact assessment)</li>
             <li>AutoCAD basics</li>
-            <li>SAP ERP (Coursework)</li>
+            <li>SAP ERP (coursework and university projects)</li>
             <li>Microsoft Excel, PowerPoint, Word</li>
-            <li>KNIME</li>
+            <li>KNIME (ETL and data workflows)</li>
           </ul>
         </div>
 
         <div class="tool-column">
-          <h3>Project & Work Tools</h3>
+          <h3>Project, Reporting & Collaboration</h3>
           <ul>
             <li>Infineon: MS Project, Jira, Confluence</li>
-            <li>Joynext: Technical reporting, task tracking tools</li>
-            <li>FH Zwickau & HTW Dresden: Python, SAP, OpenLCA, Excel</li>
-            <li>ESG Reporting, CSRD, SBTi</li>
+            <li>Joynext: Technical reporting and task tracking tools</li>
+            <li>University projects: Python, SAP, OpenLCA, Excel</li>
+            <li>Familiar with ESG reporting, CSRD and SBTi frameworks</li>
           </ul>
         </div>
       </div>
@@ -195,11 +211,10 @@
   </div>
 
   <div class="nav-buttons">
-  <a href="about.html">&larr; Back</a>
-  <a href="index.html">Home</a>
-  <a href="experience.html">Next &rarr;</a>
-</div>
-
+    <a href="about.html">&larr; Back</a>
+    <a href="index.html">Home</a>
+    <a href="experience.html">Next &rarr;</a>
+  </div>
 
   <footer>
     <p>&copy; 2025 Tejal Sungra | Powered by GitHub Pages</p>

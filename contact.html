@@ -23,51 +23,96 @@
       padding: 2rem 1rem;
     }
 
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
     .connect-container {
       flex: 1;
-      background-color: #fce4ec;
-      padding: 3rem 1.5rem;
-      max-width: 800px;
-      margin: auto;
-      border-radius: 12px;
+      padding: 2.5rem 1.5rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .connect-container h2 {
+    .intro {
       text-align: center;
-      font-size: 2rem;
-      color: #c2185b;
+      font-size: 1.1rem;
       margin-bottom: 2rem;
+      color: #5a5a5a;
     }
 
-    .buttons {
+    /* Unified card style in pink theme */
+    .content-block {
+      background-color: #fce4ec;
+      border-left: 5px solid #c2185b;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .content-block h2 {
+      margin: 0 0 0.6rem;
+      font-size: 1.4rem;
+      color: #c2185b;
+    }
+
+    .content-block p {
+      margin: 0.3rem 0 0.8rem;
+    }
+
+    .content-block ul {
+      margin: 0.3rem 0 0;
+      padding-left: 1.4rem;
+    }
+
+    .content-block ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .content-block a {
+      color: #c2185b;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .content-block a:hover {
+      text-decoration: underline;
+    }
+
+    .buttons-row {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
       flex-wrap: wrap;
-      margin-bottom: 1.5rem;
+      gap: 0.75rem;
+      margin-top: 0.8rem;
     }
 
     .btn {
       background-color: #c2185b;
       color: white;
-      padding: 0.8rem 1.6rem;
+      padding: 0.75rem 1.6rem;
       text-decoration: none;
       border: none;
       border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      display: inline-block;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease, transform 0.1s ease;
     }
 
     .btn:hover {
       background-color: #ad1457;
+      transform: translateY(-1px);
     }
 
     .nav-buttons {
       display: flex;
       justify-content: center;
-      margin: 0.5rem auto 1rem;
+      margin: 0.5rem auto 1.5rem;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .nav-buttons .btn {
@@ -77,7 +122,6 @@
       border-radius: 6px;
       font-weight: bold;
       text-decoration: none;
-      transition: background-color 0.3s ease;
     }
 
     .nav-buttons .btn:hover {
@@ -90,18 +134,22 @@
       text-align: center;
       padding: 1rem;
       margin-top: auto;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-      .buttons {
+      .buttons-row {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
       }
 
       .nav-buttons {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+      }
+
+      .connect-container {
+        padding: 2rem 1.25rem 1.5rem;
       }
     }
   </style>
@@ -112,19 +160,41 @@
   </header>
 
   <main class="connect-container" id="portfolioContent">
-    <h2>Reach out, collaborate, or explore my work!</h2>
-    <div class="buttons">
-      <!-- Resume button -->
-      <a class="btn" href="./Tejal_Sungra_resume_data.pdf" download>Download My Resume</a>
+    <p class="intro">
+      Whether you are looking for a sustainability minded analyst, a collaborator for AI and climate projects, or just want to say hello, here is how you can reach me.
+    </p>
 
-      <!-- Portfolio Snapshot button -->
-      <button class="btn" onclick="downloadPortfolioPDF()">Download Portfolio Snapshot</button>
+    <div class="content-block">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:tejalsungra@gmail.com">tejalsungra@gmail.com</a></li>
+        <li>Location: Dresden, Germany</li>
+        <li>Open for: Sustainability, data and AI roles or project collaborations</li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h2>Professional Links</h2>
+      <ul>
+        <li>Portfolio: <a href="https://tejalsungra.github.io/portfolio/" target="_blank">tejalsungra.github.io/portfolio</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/tejal-sungra/" target="_blank">linkedin.com/in/tejal-sungra</a></li>
+        <li>GitHub: <a href="https://github.com/tejalsungra" target="_blank">github.com/tejalsungra</a></li>
+      </ul>
+    </div>
+
+    <div class="content-block">
+      <h2>Downloads</h2>
+      <p>You can save my resume or a quick snapshot of this portfolio.</p>
+      <div class="buttons-row">
+        <a class="btn" href="./Tejal_Sungra_resume_data.pdf" download>Download Resume (PDF)</a>
+        <button class="btn" type="button" onclick="downloadPortfolioPDF()">Download Portfolio Snapshot (PDF)</button>
+      </div>
     </div>
   </main>
 
-  <!-- Home button -->
   <div class="nav-buttons">
     <a href="index.html" class="btn">← Back to Home</a>
+    <a href="projects.html" class="btn">View My Projects →</a>
   </div>
 
   <footer>
@@ -134,13 +204,16 @@
   <script>
     function downloadPortfolioPDF() {
       const element = document.getElementById('portfolioContent');
-      html2pdf().from(element).set({
-        margin: 1,
-        filename: 'Tejal_Sungra_Portfolio_Snapshot.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-      }).save();
+      html2pdf()
+        .from(element)
+        .set({
+          margin: 1,
+          filename: 'Tejal_Sungra_Portfolio_Snapshot.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        })
+        .save();
     }
   </script>
 </body>
